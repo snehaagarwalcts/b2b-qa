@@ -40,19 +40,6 @@ class LoginPage extends Page {
 		// contact us
 		contactUS { $('div.contact a') }
 		contactUsMessage { $('.contact') }
-		
-		//Localization
-		loginTitle { $('#page>p') }
-		username { $('.form_field-label>label',0) }
-		password { $('.form_field-label>label',1) }
-		submitButton { $('.form.right') }
-		selectlanguageLink { $('.control-label') }
-		
-		forgottenPwdTitle { $('.headline') }
-		forgottenPwdRequired { $('.required.right') }
-		forgottenPwdDescription { $('.description') }
-		forgottenPwdEmail { $('#forgottenPwdForm .control-label') }
-		forgottenPwdSubmit { $('.positive') }
 
 	}
 

@@ -121,5 +121,3 @@ class QuickOrderTest extends GebReportingSpec {
 			removeConfirm.click()
 	}		
 }
-
-

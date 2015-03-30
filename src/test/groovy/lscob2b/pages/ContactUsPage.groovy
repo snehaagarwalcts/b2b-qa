@@ -35,30 +35,7 @@ class ContactUsPage extends Page{
 		customerNumberAfterLogin { $('.controls', 6) }
 		
 		sendButton { $('button.button') }
-		
-		//Localization
-		titleLabel { $('.control-label', 0) }
-		firstNameLabel { $('.control-label', 1) }
-		lastNameLabel { $('.control-label', 2) }
-		emailLabel { $('.control-label', 3) }
-		phoneLabel { $('.control-label', 4) }
-		companyNameLabel { $('.control-label', 5) }
-		customerNumberLabel { $('.control-label', 6) }
-		countryLabel { $('.control-label', 7) }
-		commentsLabel { $('.label', 8) }
-		
-		titleError { $('.help-inline', 0) }
-		firstNameError { $('.help-inline', 1) }
-		lastNameError { $('.help-inline', 2) }
-		emailError { $('.help-inline', 3) }
-		phoneError { $('.help-inline', 4) }
-		companyNameError { $('.help-inline', 5) }
-		customerNumberError { $('.help-inline', 6) }
-		countryError { $('.help-inline', 7) }
-		commentsError { $('.help-inline', 8) }
-		
-		commentsErrorAfterLogin { $('.help-inline') }		
-		continueShoppingLink { $('.button.btn-txt-red>p') }
+
 	}
 	
 	def checkRequiredContent(){

@@ -175,7 +175,7 @@ class MyAccountTest extends GebReportingSpec {
 			
 			at HomePage
 			PageHelper.gotoPage(browser,baseUrl,PageHelper.PAGE_ORDER_HISTORY)
-//			masterTemplate.getMyAccountSubLink(PageHelper.PAGE_ORDER_HISTORY).click()
+			//masterTemplate.getMyAccountSubLink(PageHelper.PAGE_ORDER_HISTORY).click()
 
 		when: "At Order History page"
 			at OrderHistoryPage
@@ -193,5 +193,3 @@ class MyAccountTest extends GebReportingSpec {
 			UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_CUSTOMER) | _
 	}
 }
-
-//in setup login with levis user and create the test user.

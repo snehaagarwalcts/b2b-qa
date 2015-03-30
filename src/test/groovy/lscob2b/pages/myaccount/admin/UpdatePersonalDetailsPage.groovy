@@ -12,19 +12,6 @@ class UpdatePersonalDetailsPage extends Page {
 	static content = {
 		
 		masterTemplate { module MasterTemplate }
-		
-		/* Localization */
-		
-		saveButton {$(".button.save")}
-		
-		cancelButton {$(".button.btn-txt-red.cancel>p")}
-		
-		updateProfileLabel { $('.control-label', it)}
 				
 	}	
-	
-	//Localization 
-	def clickSaveButton(){
-		saveButton.click()
-	}
 }

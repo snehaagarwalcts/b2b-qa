@@ -104,22 +104,7 @@ class MasterTemplate extends Module {
 		
 		privacyPolicyLink {$('div.footer a[href*="/privacyPolicy"]')}	
 		
-		//Localization
-		
-		welcomeLink {$('.global-nav-list>li',0)}
-		
-		languageSelector {$('a.global-nav-hasmenu.country span') }
-		
-		globalNavSubLinks { $('.yCmsComponent>ul li a', it) }
-		
-		searchText { $('input#input-search').attr('placeholder') }
-		
-		menCategory { $('a[title="Men"]') }
-		
-		womenCategory { $('a[title="Women"]') }
-		
-		subCategory { $('.subnav-column>ul>h3', it) }
-		
+		/* Common Links */
 		mainContainerLabel { $('#main-container>h1') }
 		
 		introContainerLabel { $('.intro-container') }

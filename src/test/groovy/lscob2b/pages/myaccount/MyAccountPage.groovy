@@ -39,9 +39,7 @@ class MyAccountPage extends Page {
 		
 		//Accont Balance
 		accountBalanceLink(required: false) { $("div.headline").find('a', href: endsWith('/balance')) }
-		
-		//localization
-		myAccountBalanceLink {$('.tile.column.accountBalance>ul>li>a')}
+
 	}
 	
 	def boolean hasPageLink(String link) {
@@ -91,28 +89,4 @@ class MyAccountPage extends Page {
 		!viewOrderHistory.empty
 	}
 			
-	// localization
-	def clickOnProfile(){
-		profileLink.click()
-	}
-	
-	def clickOnMyAccountBalanceLink(){
-		myAccountBalanceLink.click()
-	}
-	
-	def clickOnAddressBookLink(){		
-		addressBookLink.click()
-	}
-	
-	def clickOnOrderHistoryLink(){
-		orderHistoryLink.click()
-	}
-	
-	def clickOnManageUsersLink(){
-		manageUsers.click()
-	}
-	
-	def clickOnAddNewUsers(){
-		addNewUsers.click()
-	}
 }

@@ -68,9 +68,9 @@ class CartPageTest extends GebReportingSpec {
 		waitFor { !sizingGrid.empty }
 		sizingGrid.addLimitedStockQuantityToCart(1)
 		
-		and: "Go to Cart Page"
-		to CartPage		
-//		masterTemplate.cartItemLink.click()
+		and: "Go to Cart Page"		
+		masterTemplate.cartItemLink.click()
+		to CartPage
 		
 		then: "at cart page"
 		at CartPage

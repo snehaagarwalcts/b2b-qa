@@ -20,21 +20,10 @@ class ProductCategoryPage extends Page {
 		
 		keylookLink { index -> keylookItems[index].find("a") }
 		
-		/* Localization */
-		categoryLink { $('.yCmsContentSlot.shop-by-category>h2') }
-		
-		seasonalInitiativeLink { $('.yCmsContentSlot.shop-by-seasonal>h2') }
-		
-		shopByStyleLink { $('.yCmsContentSlot.shop-by-style>h2') }
-		
-		shopByFitLink { $('.yCmsContentSlot.shop-by-fit>h2') }
-		
 	}
 
 	def clickFirstProductLink() {
 		firstProductLink.click()
 	}
-	
-	/**/
 	
 }

@@ -17,8 +17,7 @@ class OrderDetailPage extends Page{
 		
 		order {module OrderModule}
 		
-		linkReOrder(required: false) { $("a#reorder") }
-		
+		linkReOrder(required: false) { $("a#reorder") }		
 		
 	}
 		

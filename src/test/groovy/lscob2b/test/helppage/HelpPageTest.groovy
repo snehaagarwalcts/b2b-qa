@@ -70,7 +70,6 @@ class HelpPageTest extends GebReportingSpec {
 	/**
 	 * TC BB-849 Getting Help - check common content of help page
 	 */
-	
 	def "check the common content of Help page"(){
 		setup:
 		at LoginPage

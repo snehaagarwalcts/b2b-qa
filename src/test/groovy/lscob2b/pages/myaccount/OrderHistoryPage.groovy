@@ -56,22 +56,6 @@ class OrderHistoryPage extends Page{
 		orderSourceLabel { $("#header6") }
 		invoiceLabel { $("#header7") }		
 		
-		//localization
-		clearSelection {$(".button.btn-txt-red.clear>p")}
-		hideSearch{$(".button.btn-txt-grey.toggle>p")}				
-		poNumberLabel {$(".control-label.forText:nth-child(1)")}
-		orderNumberLabel {$(".control-label.forText:nth-child(3)")}		
-		status {$(".control-group>h2",0)}
-		date {$(".control-group>h2",1)}
-		type {$(".control-group>h2",2)}
-		orderSource {$(".control-group>h2",3)}
-		orderSelectionLabels { $('.control-group>fieldset>div label', it) }
-		searchOrderHistoryLink { $('.button.btn-txt-red.toggle>p') }
-		ordersFoundLabel1 { $(".totalResults",1) }
-		sortByLabel1 { $("#sort_form2>label") }
-		sortByDropdown { $('.paginationBar .sortOptions', it) }
-		sortByOptions { $('.paginationBar .sortOptions option', it) }
-		pageLink { $('.pagination>span', it) }
 	}
 	
 	def checkOrderHistoryData(){

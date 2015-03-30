@@ -25,20 +25,6 @@ class UpdatePasswordPage extends Page {
 		
 		errorMessage { $('div.b2BCustomerFormList>div.control-group.error>:nth-of-type(2)>span') }
 		
-		//localization
-		
-		passwordHintText {$(".help-inline>span")} 
-		
-		currentPwdLabel {$("div.b2BCustomerFormList>div.control-group .label .control-label",0)}
-		
-		newPasswordLabel {$("div.b2BCustomerFormList>div.control-group .label .control-label",1)}
-		
-		confirmNewPasswordLabel {$("div.b2BCustomerFormList>div.control-group .label .control-label",2)}
-		
-		cancelButton {$(".button.btn-txt-red.cancel>p")}
-		
-		currentPasswordError {$("div.b2BCustomerFormList>div.control-group.error>:nth-of-type(2)>span",0)}
-		
 	}
 	
 	def doUpdatePassword(oldPassword, newPassword)
@@ -48,10 +34,5 @@ class UpdatePasswordPage extends Page {
 		confirmNewPasswordText.value(newPassword)
 		updatePasswordButton.click()
 	}
-	
-	//localization
-	def clickUpdatePasswordButton(){
-		updatePasswordButton.click()
-	}	
 
 }

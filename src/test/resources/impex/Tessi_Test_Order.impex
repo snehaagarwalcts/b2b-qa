@@ -8,7 +8,6 @@ INSERT_UPDATE B2BUnit;uid[unique=true];name;country(isocode);userPriceGroup(code
 
 INSERT_UPDATE Address;publicKey[unique=true];postalcode;streetname;town;region(isocode);country(isocode);owner(B2BUnit.uid);firstname;lastname;billingAddress;shippingAddress
 ;0010023029|0010023029|SP;CO1 1LS;"1a & 1b, Eld Lane,";"Colchester.";GB-CO;GB;0010023029;"Tessi User";;true;false
-# ;0010023029|0010023029|SP;CO1 1LS;"1a & 1b, Eld Lane,";"Colchester.";GB-CO;GB;0010011241;"Tessi User";;true;false
 
 INSERT_UPDATE B2BCustomer;uid[unique=true];originalUid;email;title(code);name;customerID;groups(uid);defaultB2BUnit(uid);active;sendEmailEnabled[default=false];$setPassword
 ;tessi.user@test.com;tessi.user@test.com;tessi.user@test.com;Mr.;"Tessi User";tessi-user-id;0010023029,b2badmingroup,b2bcustomergroup,b2bfinancegroup;0010023029;true
