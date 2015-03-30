@@ -11,7 +11,7 @@
 		<geb.version>0.10.0</geb.version>
 		<!-- DEFAULT PROPERTIES -->
 		<!-- <test.parallel>1</test.parallel> -->
-		<!-- <test.env>local</test.env> -->
+		<!-- <test.env>qa001</test.env> -->
 		<!-- <test.platform>windows</test.platform> -->
 		<!-- <test.browser>firefox</test.browser> -->
 		<!-- <test.browser.version>34</test.browser.version> -->
@@ -277,6 +277,12 @@
 		</profile>
 
 		<!-- ENV PROFILE -->
+		<profile>
+			<id>preprod</id>
+			<properties>
+				<test.env>preprod</test.env>
+			</properties>
+		</profile>
 		<profile>
 			<id>integration000</id>
 			<properties>

@@ -36,76 +36,42 @@ if(browserName == null || browserName == "") {
  * Target Configuration
  */
 
-/* Default Locale */
-//locale="de"
-//locale="fr"
-//locale="it"
-//locale="es"
-locale="en"
-
 /* Default Target URL */
-//baseUrl = "http://lscob2b.local:9001/lscob2bstorefront/"+locale+"/"
-baseUrl = "http://b2bqa-001-web-000.lsco-b2b.com/"+locale+"/"
+baseUrl = "http://b2bqa-001-web-000.lsco-b2b.com/"
 
 /* HAC Configuration (required for impex runtime loading) */
-//hacUrl = "http://lscob2b.local:9001/"
 hacUrl = "http://b2bqa-001-cron-000.lsco-b2b.com:9001/hac/"
 hacUsername = "admin"
 hacPassword = "nimda"
 
 // when system property 'geb.env' is set to 'integration000'
 environments {
-	local {
-		//locale="de"
-		//locale="fr"
-		//locale="it"
-		//locale="es"
-		locale="en"
-		baseUrl = "http://lscob2b.local:9001/lscob2bstorefront/"+locale+"/"
-		hacUrl = "http://lscob2b.local:9001/"
+	preprod {
+		baseUrl = "https://b2bpreprod-000-web-000.lsco-b2b.com/"
+		hacUrl = "http://b2bpreprod-000-cron-000.lsco-b2b.com:9001/hac/"
 		hacUsername = "admin"
 		hacPassword = "nimda"
 	}
 	integration000 {
-		//locale="de"
-		//locale="fr"
-		//locale="it"
-		//locale="es"
-		locale="en"
-		baseUrl = "http://b2bint-000-store-000.lsco-b2b.com:9001/lscob2bstorefront/"+locale+"/"
+		baseUrl = "http://b2bint-000-store-000.lsco-b2b.com:9001/lscob2bstorefront/"
 		hacUrl = "http://b2bint-000-store-000.lsco-b2b.com:9001/"
 		hacUsername = "admin"
 		hacPassword = "nimda"
 	}
 	integration001 {
-		//locale="de"
-		//locale="fr"
-		//locale="it"
-		//locale="es"
-		locale="en"
-		baseUrl = "http://b2bint-001-store-000.lsco-b2b.com:9001/lscob2bstorefront/"+locale+"/"
+		baseUrl = "http://b2bint-001-store-000.lsco-b2b.com:9001/lscob2bstorefront/"
 		hacUrl = "http://b2bint-001-store-000.lsco-b2b.com:9001/"
 		hacUsername = "admin"
 		hacPassword = "nimda"
 	}
 	qa000 {
-		//locale="de"
-		//locale="fr"
-		//locale="it"
-		//locale="es"
-		locale="en"
-		baseUrl = "http://b2bqa-000-web-000.lsco-b2b.com/"+locale+"/"
+		baseUrl = "http://b2bqa-000-web-000.lsco-b2b.com/"
 		hacUrl = "http://b2bqa-000-cron-000.lsco-b2b.com:9001/hac/"
 		hacUsername = "admin"
 		hacPassword = "nimda"
 	}
 	qa001 {
-		//locale="de"
-		//locale="fr"
-		//locale="it"
-		//locale="es"
-		locale="en"
-		baseUrl = "http://b2bqa-001-web-000.lsco-b2b.com/"+locale+"/"
+		baseUrl = "http://b2bqa-001-web-000.lsco-b2b.com/"
 		hacUrl = "http://b2bqa-001-cron-000.lsco-b2b.com:9001/hac/"
 		hacUsername = "admin"
 		hacPassword = "nimda"
