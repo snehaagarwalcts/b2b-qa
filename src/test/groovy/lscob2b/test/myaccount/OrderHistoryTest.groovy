@@ -1,5 +1,7 @@
 package lscob2b.test.myaccount
 
+import spock.lang.Ignore;
+import spock.lang.IgnoreRest;
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
 import lscob2b.data.ProductHelper

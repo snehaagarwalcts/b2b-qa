@@ -7,6 +7,7 @@ import lscob2b.data.ProductHelper
 import lscob2b.data.UserHelper
 import lscob2b.pages.HomePage
 import lscob2b.pages.LoginPage
+import lscob2b.pages.cart.CartPage;
 import lscob2b.pages.checkout.CheckOutPage
 import lscob2b.pages.myaccount.admin.EditUserDetailsPage
 import lscob2b.pages.myaccount.admin.ManageUsersPage
@@ -182,6 +183,11 @@ class ManageUserTest extends GebReportingSpec {
 		
 		then: "check alternative delivery address displayed"
 		alternateDeliveryAddressSelect.displayed
+		
+		and: "Go to CartPage and remove product"
+		to CartPage
+		at CartPage
+		assert removeExistingProducts()
 		
 		where:
 		user | product

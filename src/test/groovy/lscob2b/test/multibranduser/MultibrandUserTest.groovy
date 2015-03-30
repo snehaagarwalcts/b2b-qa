@@ -1,5 +1,6 @@
 package lscob2b.test.multibranduser
 
+import spock.lang.IgnoreRest;
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
 import lscob2b.data.UserHelper

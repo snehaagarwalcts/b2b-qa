@@ -39,7 +39,7 @@ class OrderHistoryPage extends Page{
 		checkboxOrderSourceSFA { searchForm.find("input", type:'checkbox', name:'sources',3) }		
 		checkboxOrderSourceLEO { searchForm.find("input", type:'checkbox', name:'sources',4) }			
 
-		clickCheckbox  { $('.iCheck-helper', it) }
+		clickCheckbox  { $('.control-group label', it) }
 
 		/* Result */		
 		resultTable(required: false) { $("table.orderListTable") }		
@@ -70,7 +70,7 @@ class OrderHistoryPage extends Page{
 		!checkboxOrderStatusInProgress.value() && fieldOrderNumber.value() == "" && fieldPONumber.value() == ""
 	}
 	
-	def switchOnForm() {		
+	def switchOnForm() {
 		clickCheckbox(0).click()
 		clickCheckbox(1).click()
 		clickCheckbox(2).click()
@@ -81,9 +81,9 @@ class OrderHistoryPage extends Page{
 		clickCheckbox(7).click()
 		clickCheckbox(8).click()
 		clickCheckbox(9).click()
-		checkboxOrderDate30.click()
-		checkboxOrderDate90.click()
-		checkboxOrderDateYear.click()
+		clickCheckbox(10).click()
+		clickCheckbox(11).click()
+		clickCheckbox(12).click()
 		fieldPONumber.value("Test PO")
 		fieldOrderNumber.value("Test Order")
 	}
@@ -94,26 +94,26 @@ class OrderHistoryPage extends Page{
 	}	
 
 	def searchByOrderNumberAndOrderSource(String orderNumber, boolean b2b, boolean edi, boolean sap, boolean sfa, boolean leo) {
-		if(checkboxOrderSourceB2B.value() != b2b) clickCheckbox(5).click()
-		if(checkboxOrderSourceEDI.value() != edi) clickCheckbox(6).click()
-		if(checkboxOrderSourceSAP.value() != sap) clickCheckbox(7).click()
-		if(checkboxOrderSourceSFA.value() != sfa) clickCheckbox(8).click()
-		if(checkboxOrderSourceLEO.value() != leo) clickCheckbox(9).click()
+		if(checkboxOrderSourceB2B.value() != b2b) clickCheckbox(8).click()
+		if(checkboxOrderSourceEDI.value() != edi) clickCheckbox(9).click()
+		if(checkboxOrderSourceSAP.value() != sap) clickCheckbox(10).click()
+		if(checkboxOrderSourceSFA.value() != sfa) clickCheckbox(11).click()
+		if(checkboxOrderSourceLEO.value() != leo) clickCheckbox(12).click()
 		fieldOrderNumber.value(orderNumber)
 		searchButton.click()
 	}
 	
 	def searchByOrderNumberAndOrderType(String orderNumber, boolean atOnce, boolean preBook) {
-		if(checkboxOrderTypeAO.value() != atOnce) clickCheckbox(3).click()
-		if(checkboxOrderTypePB.value() != preBook) clickCheckbox(4).click()
+		if(checkboxOrderTypeAO.value() != atOnce) clickCheckbox(6).click()
+		if(checkboxOrderTypePB.value() != preBook) clickCheckbox(7).click()
 		fieldOrderNumber.value(orderNumber)
 		searchButton.click()
 	}
 	
 	def searchByOrderNumberAndOrderDate(String orderNumber, boolean last30, boolean last90, boolean lastYear) {
-		if(last30) checkboxOrderDate30.click()
-		if(last90) checkboxOrderDate90.click()
-		if(lastYear) checkboxOrderDateYear.click()
+		if(last30) clickCheckbox(3).click()
+		if(last90) clickCheckbox(4).click()
+		if(lastYear) clickCheckbox(5).click()
 		fieldOrderNumber.value(orderNumber)
 		searchButton.click()
 	}

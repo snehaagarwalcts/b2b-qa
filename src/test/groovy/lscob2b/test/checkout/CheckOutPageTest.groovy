@@ -6,6 +6,7 @@ import lscob2b.data.ProductHelper
 import lscob2b.data.UserHelper
 import lscob2b.pages.HomePage
 import lscob2b.pages.LoginPage
+import lscob2b.pages.cart.CartPage;
 import lscob2b.pages.checkout.CheckOutPage
 import lscob2b.pages.quickorder.QuickOrderPage
 
@@ -42,6 +43,7 @@ class CheckOutPageTest extends GebReportingSpec {
 		at QuickOrderPage
 
 		and: "add product to cart"
+		masterTemplate.waitForSometime()
 		def int cartCount = masterTemplate.cartItemCount.text().toInteger()
 		waitFor { !productSizingGrids.empty }
 		addLimitedStockQuantityToCart(0,1)
@@ -61,6 +63,11 @@ class CheckOutPageTest extends GebReportingSpec {
 		then: "check page elements"
 		checkCreditCardPaymentButtonExists()
 		invoicePayment.empty
+		
+		and: "Go to CartPage and remove product"
+		to CartPage
+		at CartPage
+		assert removeExistingProducts()
 
 		where:
 		user | targetProductCode

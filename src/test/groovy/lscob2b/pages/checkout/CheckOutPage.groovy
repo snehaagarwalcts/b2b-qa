@@ -14,7 +14,7 @@ class CheckOutPage extends Page{
 		masterTemplate {module MasterTemplate}
 		
 		//placeOrderLink { $("div.cartButtons a.placeOrderButton") }
-		placeOrderLink { $('form#placeOrderForm1 a.button-large.placeOrderButton') }
+		placeOrderLink { $('.button-large.placeOrderButton') }
 		
 		cartItems { $("div.cartItem").collect { module CartModule, it  } }
 		
@@ -22,8 +22,8 @@ class CheckOutPage extends Page{
 		total { $('.total span') }
 		subTotal { $('.subtotal span') }
 		including { $('#ajaxCart .including') } //For this to work order simulation has to be turned on
-		remove { $("#RemoveProduct_0>p") }
-		removeConfirm { $("#RemoveProduct_0>p",1) }
+		remove { $("#RemoveProduct_0") }
+		removeConfirm { $("#RemoveProduct_0",1) }
 		
 		//Payment Terms
 		creditCardPayment(required: false) { $('#PaymentTypeSelection_CARD') }
@@ -31,7 +31,7 @@ class CheckOutPage extends Page{
 		creditCardDefault { $('#PaymentTypeSelection_CARD').attr('checked')}
 		
 		//Select Delivery address
-		alternateDeliveryAddressSelect(required: false) { $('.button.editButton>p')}
+		alternateDeliveryAddressSelect(required: false) { $('.button.editButton')}
 		useAddressSelect{ $('div.addressEntry:nth-child(1) button.useAddress')}
 		
 		//No delivery address selected

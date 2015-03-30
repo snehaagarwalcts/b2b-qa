@@ -14,9 +14,9 @@ class MasterTemplate extends Module {
 		
 		homeLink { $("#breadcrumb li a", href: endsWith('/')) }
 
-		//myAccountLink {$('.global-nav-hasmenu.hover>span')}
+		myAccountLink {$('a[href="/en/my-account"]')}
 
-		myAccountLink {$('div.global-nav ul.global-nav-list').find("a.global-nav-hasmenu", href: contains("/my-account"),0)}				
+		//myAccountLink {$('div.global-nav ul.global-nav-list').find("a.global-nav-hasmenu", href: contains("/my-account"),0)}				
 		
 		myAccountSubLink { $('ul.global-nav-list>li.yCmsComponent:nth-child(3) li')}
 		

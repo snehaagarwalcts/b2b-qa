@@ -38,7 +38,7 @@ class QuickOrderPage extends Page{
 		
 		spanPrice { $("span#total-price") }
 				
-		checkOutLink { $(".button-large.checkout>p") }
+		checkOutLink { $(".button-large.checkout") }
 		
 		//OverLay
 		
