@@ -10,6 +10,7 @@ import de.hybris.geb.page.hac.console.ImpexImportPage
 
 
 @Stepwise
+@IgnoreIf({System.getProperty("geb.browser") == "internet explorer"})
 class ImpexLoadingTest extends GebReportingSpec {
 
 	def "login at HAC"() {
