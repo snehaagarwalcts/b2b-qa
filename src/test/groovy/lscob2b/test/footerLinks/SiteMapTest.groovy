@@ -16,37 +16,7 @@ class SiteMapTest extends GebReportingSpec{
 		to LoginPage
 		at LoginPage
 	}	
-	
-	/**
-	 * US BB-594 Site Map
-	 * TC BB-839 Automated Test Case: Verify Site Map Link in Footer section
-	 */
-	def "Verify Site Map Link in Footer section"(){
-		setup:
-		login(user)
-		
-		when:"at Home Page"
-		at HomePage
-		
-		then:"check SiteMap Link is present or not"
-		waitFor{ masterTemplate.siteMapLink.displayed }
-				
-		where:
-		user | _
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_SUPER) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_ADMIN) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_CUSTOMER) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_FINANCE) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_DOCKERS, UserHelper.ROLE_SUPER) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_DOCKERS, UserHelper.ROLE_ADMIN) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_DOCKERS, UserHelper.ROLE_CUSTOMER) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_DOCKERS, UserHelper.ROLE_FINANCE) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_SUPER) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_ADMIN) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_CUSTOMER) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_FINANCE) | _
-	}
-	
+
 	/**
 	 * US BB-594 Site Map
 	 * TC BB-840 Automated Test Case: Check the content of SiteMap Page
