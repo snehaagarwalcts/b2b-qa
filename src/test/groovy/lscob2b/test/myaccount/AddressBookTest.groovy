@@ -47,7 +47,7 @@ class AddressBookTest extends GebReportingSpec {
 			at AddressBookPage
 	
 		then: "Test content of Shipping Address Header and Shipping Data Size"
-			assert shippingHeader.text()=="VIEW MY ADDRESS BOOK"
+			assert shippingHeader.text()=="VIEW YOUR DELIVERY ADDRESSES"
 			assert addressShipping.size() == shippingData.size();
 		
 		and: "Test Shipping Data Content"
