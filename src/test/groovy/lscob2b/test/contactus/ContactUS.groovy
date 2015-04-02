@@ -1,6 +1,5 @@
 package lscob2b.test.contactus
 
-import spock.lang.IgnoreRest;
 import geb.spock.GebReportingSpec
 import lscob2b.pages.ContactUsPage
 import lscob2b.pages.LoginPage
@@ -14,7 +13,6 @@ class ContactUS extends GebReportingSpec {
 	
 	/**
 	 * TC BB-610 Automated test: BB-412 New customer requesting access - content test
-	 * @return
 	 */
 	def "Check the content of contact us page"(){
 		

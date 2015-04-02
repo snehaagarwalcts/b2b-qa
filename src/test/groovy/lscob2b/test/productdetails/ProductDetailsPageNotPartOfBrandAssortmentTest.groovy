@@ -31,7 +31,7 @@ class ProductDetailsPageNotPartOfBrandAssortmentTest extends GebReportingSpec {
 	 */
 	def "Product not part of your brand assortment"(){
 		setup:
-		PageHelper.gotoPageProductDetail(browser,baseUrl,targetProductCode)
+		PageHelper.gotoPageProductDetail(browser,browser.getCurrentUrl(),targetProductCode)
 
 		when: "at product detail page"
 		at ProductDetailsPage

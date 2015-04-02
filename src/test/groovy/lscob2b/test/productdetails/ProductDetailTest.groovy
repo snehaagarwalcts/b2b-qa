@@ -14,7 +14,6 @@ import lscob2b.test.data.User
 import spock.lang.Ignore
 import spock.lang.Stepwise
 
-
 @Stepwise
 class ProductDetailTest extends GebReportingSpec {
 	
@@ -36,7 +35,7 @@ class ProductDetailTest extends GebReportingSpec {
 	 */
 	def "Add to cart from product details page"(){
 		setup:
-			PageHelper.gotoPageProductDetail(browser,baseUrl,targetProductCode)
+			PageHelper.gotoPageProductDetail(browser,browser.getCurrentUrl(),targetProductCode)
 				
 		when: "at product detail page"
 			at ProductDetailsPage
@@ -55,7 +54,7 @@ class ProductDetailTest extends GebReportingSpec {
 	
 	def "Check cartpage status"(){
 		setup:
-			PageHelper.gotoPageProductDetail(browser,baseUrl,targetProductCode)
+			PageHelper.gotoPageProductDetail(browser,browser.getCurrentUrl(),targetProductCode)
 	
 		when: "at product detail page"
 			at ProductDetailsPage

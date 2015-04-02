@@ -18,29 +18,35 @@ class HelpPage extends Page {
 		training { $('.bannerWrapper').find('a', href: endsWith('/training')) }
 
 		contactUs { $('.bannerWrapper').find('a', href: endsWith('/contactus')) }
+		
+//		faq { $('.levi-editable',0) }
+//		
+//		training { $('.levi-editable',1)}
+//		
+//		contactUs { $('.levi-editable',2)}
 	}
 
 	def checkFAQLinkExists(){
 		!faq.empty
 	}
-
-	def checkContactUsLinkExists(){
-		!contactUs.empty
-	}
-
+	
 	def checkTrainingLinkExists(){
 		!training.empty
+	}
+	
+	def checkContactUsLinkExists(){
+		!contactUs.empty
 	}
 	
 	def clickFAQLink(){
 		faq.click()
 	}
 
-	def clickContactUsLink(){
-		contactUs.click()
-	}
-
 	def clickTrainingLink(){
 		training.click()
+	}
+	
+	def clickContactUsLink(){
+		contactUs.click()
 	}
 }

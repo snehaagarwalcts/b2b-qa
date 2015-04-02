@@ -40,7 +40,7 @@ class MasterTemplate extends Module {
 
 		quickOrderLink { $('header h2').find("a", href: contains("/advanced")) }
 
-		goToCartLink { $("div.mini-cart h3") }
+		goToCartLink { $("div.mini-cart") }
 
 		brandSelectionInput { $("form#theme-form").find("input", type: "hidden", name: "code") }
 		
@@ -158,6 +158,7 @@ class MasterTemplate extends Module {
 	}
 
 	def doGoToCart(){
+		waitFor { goToCartLink.displayed  }
 		goToCartLink.click()
 	}
 

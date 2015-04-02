@@ -69,7 +69,7 @@ class CartPageTest extends GebReportingSpec {
 		sizingGrid.addLimitedStockQuantityToCart(1)
 		
 		and: "Go to Cart Page"		
-		masterTemplate.cartItemLink.click()
+		//masterTemplate.doGoToCart()  //issue with chrome
 		to CartPage
 		
 		then: "at cart page"
