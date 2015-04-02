@@ -40,7 +40,7 @@ class ContactUS extends GebReportingSpec {
 		fillOutEmail('sagarwal1@levi.com')
 		fillOutPhone('111-222-3333')
 		fillOutCompanyName('Levis')
-		fillOutCustomerNumber('111-222-3333')
+		//fillOutCustomerNumber('111-222-3333')
 		def country = selectCountryOption(234)
 		fillOutComments('test')
 		clickSendButton()
@@ -60,7 +60,7 @@ class ContactUS extends GebReportingSpec {
 		fillOutEmail('cust@unit-5')
 		fillOutPhone('111-222-3333')
 		fillOutCompanyName('Levis')
-		fillOutCustomerNumber('111-222-3333')
+		//fillOutCustomerNumber('111-222-3333')
 		def country = selectCountryOption(18)
 		clickSendButton()
 		

@@ -23,7 +23,7 @@ class ContactUsPage extends Page{
 		emailText { $('.controls input', 2) }
 		phoneText { $('.controls input', 3) }
 		companyName { $('.controls input', 4) }
-		customerNumber { $('.controls input', 5) }
+		//customerNumber { $('.controls input', 5) }
 		country { $('.dropdown-container select[name="countryCode"] option', it) }
 		comments { $('#contactUsForm div.controls textarea') }
 		
@@ -73,9 +73,9 @@ class ContactUsPage extends Page{
 		companyName.value(companyname)
 	}
 	
-	def fillOutCustomerNumber(String customernumber){
-		customerNumber.value(customernumber)
-	}
+//	def fillOutCustomerNumber(String customernumber){
+//		customerNumber.value(customernumber)
+//	}
 	
 	def fillOutComments(String comment){
 		comments.value(comment)
