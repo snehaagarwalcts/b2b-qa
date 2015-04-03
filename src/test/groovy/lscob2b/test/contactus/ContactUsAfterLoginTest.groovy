@@ -1,11 +1,11 @@
 package lscob2b.test.contactus
 
-import lscob2b.data.PageHelper;
-import lscob2b.data.UserHelper;
-import lscob2b.pages.ContactUsPage;
-import lscob2b.pages.HomePage;
-import lscob2b.pages.LoginPage;
-import geb.spock.GebReportingSpec;
+import lscob2b.data.PageHelper
+import lscob2b.data.UserHelper
+import lscob2b.pages.ContactUsPage
+import lscob2b.pages.HomePage
+import lscob2b.pages.LoginPage
+import geb.spock.GebReportingSpec
 
 class ContactUsAfterLoginTest extends GebReportingSpec {
 	
