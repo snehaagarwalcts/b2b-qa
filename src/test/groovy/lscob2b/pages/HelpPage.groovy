@@ -19,11 +19,6 @@ class HelpPage extends Page {
 
 		contactUs { $('.bannerWrapper').find('a', href: endsWith('/contactus')) }
 		
-//		faq { $('.levi-editable',0) }
-//		
-//		training { $('.levi-editable',1)}
-//		
-//		contactUs { $('.levi-editable',2)}
 	}
 
 	def checkFAQLinkExists(){

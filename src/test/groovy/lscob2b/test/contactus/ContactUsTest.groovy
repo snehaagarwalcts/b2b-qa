@@ -1,13 +1,16 @@
 package lscob2b.test.contactus
 
-import geb.spock.GebReportingSpec
-import lscob2b.pages.ContactUsPage
-import lscob2b.pages.LoginPage
+import lscob2b.data.PageHelper;
+import lscob2b.pages.ContactUsPage;
+import lscob2b.pages.LoginPage;
+import geb.spock.GebReportingSpec;
 
-class ContactUS extends GebReportingSpec {
+class ContactUsTest extends GebReportingSpec {
 
 	def setup() {
+		PageHelper.gotoPageLogout(browser, baseUrl)
 		to LoginPage
+		at LoginPage
 		clickContactUS()
 	}
 	
