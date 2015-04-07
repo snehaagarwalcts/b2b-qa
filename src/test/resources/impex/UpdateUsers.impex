@@ -1,0 +1,10 @@
+#########################################################################
+# Updating Existing Users
+#########################################################################
+$passwordEncoding=md5
+$defaultPassword=Levis2015#
+$setPassword=@password[translator=de.hybris.platform.impex.jalo.translators.ConvertPlaintextToEncodedUserPasswordTranslator][default='$passwordEncoding:$defaultPassword']
+
+INSERT_UPDATE B2BCustomer;uid[unique=true];agree;originalUid;email;title(code);name;firstName;lastName;customerID;groups(uid);defaultB2BUnit(uid);active;sendEmailEnabled[default=false];$setPassword
+;update@password-1;true;update@password-1;update@password-1;Mr.;"Levis Customer";"Levis";"Customer";0000010005;NOR701,automated-unit-1,b2bcustomergroup;automated-unit-1;true
+;term@condition-1;false;term@condition-1;term@condition-1;Mr.;"Levis Customer";"Levis";"Customer";0000010005;NOR701,automated-unit-1,b2bcustomergroup;automated-unit-1;true

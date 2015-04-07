@@ -11,11 +11,34 @@ import lscob2b.pages.myaccount.admin.UpdatePasswordPage
 import spock.lang.Ignore
 
 class UpdatePasswordTest extends GebReportingSpec {
-
-	def setup() {
-		PageHelper.gotoPageLogout(browser, baseUrl)
-		to LoginPage
-		at LoginPage	
+	
+	def "load impex [/impex/UpdateUsers.impex]"() {
+		setup:
+		browser.go(browser.config.rawConfig.hacUrl)
+		at de.hybris.geb.page.hac.LoginPage
+	
+		doLogin(browser.config.rawConfig.hacUsername, browser.config.rawConfig.hacPassword)
+		at de.hybris.geb.page.hac.HomePage
+			
+		when: "at HAC home page"
+		at de.hybris.geb.page.hac.HomePage
+			
+		and: "go to Console>ImpexImport page"
+		browser.go(browser.config.rawConfig.hacUrl + "console/impex/import")
+		
+		and: "at ImpexImport page"
+		waitFor { ImpexImportPage}
+		at ImpexImportPage
+		
+		and: "load impex in HAC"
+		setLegacyMode(true)
+		importTextScript(getClass().getResource('/impex/UpdateUsers.impex').text)
+			
+		then: "check import result"
+		checkNotification()
+			
+		cleanup:
+		menu.logout()
 	}
 	
 	/**
@@ -24,6 +47,9 @@ class UpdatePasswordTest extends GebReportingSpec {
 	 */
 	def "Check Password Update functionality with non-compliant password"(){
 		setup:
+		PageHelper.gotoPageLogout(browser, baseUrl)
+		to LoginPage
+		at LoginPage
 		login(user)
 		at HomePage
 		masterTemplate.clickMyAccount()
@@ -65,6 +91,9 @@ class UpdatePasswordTest extends GebReportingSpec {
 	 */
 	def "Check Password Update functionality with compliant password"(){
 		setup:
+		PageHelper.gotoPageLogout(browser, baseUrl)
+		to LoginPage
+		at LoginPage
 		login(user)
 		at HomePage
 		masterTemplate.clickMyAccount()
