@@ -76,6 +76,7 @@ class ProductDetailsPage extends Page {
 	def addOrderQuantity(String quantity){
 		sizingTable.addLimitedStockQuantity(quantity.toInteger())
 	}
+	
 
 	def findLinkColor(String href) {
 		$("ul.color-swatches").find("a",href:endsWith(href),0)
@@ -98,5 +99,11 @@ class ProductDetailsPage extends Page {
 		overlayClosePopUp.click()
 
 	}
+	//srilatha 
+	
+	def addOrderQuantity2(String quantity){
+		sizingTable.addFullStockQuantity(quantity.toInteger())
+	}
+	
 
 }

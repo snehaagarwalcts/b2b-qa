@@ -27,7 +27,8 @@ class PerformanceTest extends GebReportingSpec {
 		at ProductDetailsPage
 
 		//Add To Cart
-		addOrderQuantity("1")
+	
+		addOrderQuantity2("1")
 		sizingGrid.buttonAddToCart.click()
 		masterTemplate.goToCartLink.click()
 		to CartPage
