@@ -1,6 +1,5 @@
 package lscob2b.test.myaccount
 
-import geb.spock.GebReportingSpec;
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
 import lscob2b.data.ProductHelper
