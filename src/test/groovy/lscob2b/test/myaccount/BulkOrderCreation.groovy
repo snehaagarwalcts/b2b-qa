@@ -30,7 +30,7 @@ class BulkOrderCreation extends GebReportingSpec{
 			placeAnOrder(productCode)
 			
 		where:
-	    i << (1..2)
+	    i << (1..1000)
 	}
 	
 	def placeAnOrder(String productCode) {
@@ -39,7 +39,7 @@ class BulkOrderCreation extends GebReportingSpec{
 		at ProductDetailsPage
 
 		//Add To Cart
-		addOrderQuantity("1")
+		addFullStockOrderQuantity("1")
 		sizingGrid.buttonAddToCart.click()
 		masterTemplate.goToCartLink.click()
 		to CartPage

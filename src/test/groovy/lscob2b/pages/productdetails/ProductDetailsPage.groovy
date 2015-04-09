@@ -99,9 +99,9 @@ class ProductDetailsPage extends Page {
 		overlayClosePopUp.click()
 
 	}
-	//srilatha 
 	
-	def addOrderQuantity2(String quantity){
+	//srilatha 
+	def addFullStockOrderQuantity(String quantity){
 		sizingTable.addFullStockQuantity(quantity.toInteger())
 	}
 	
