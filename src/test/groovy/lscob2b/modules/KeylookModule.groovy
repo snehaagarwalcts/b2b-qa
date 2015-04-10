@@ -9,15 +9,15 @@ class KeylookModule extends Module{
 			
 		thumb { $("div.thumb") }
 		
-		name { $("div.itemName") }
+		itemName { $("div.itemName") }
 		
 		style { $("div.itemStyle") }
 		
 		color { $("div.itemColor") }
 		
-		priceWholesale { $("div.wholesale-price") }
+		priceWholesale { $("div.itemPrice") }
 		
-		priceRetail { $("div.recommended-retail-price") }
+		//priceRetail { $("div.recommended-retail-price") }
 		
 	}
 
