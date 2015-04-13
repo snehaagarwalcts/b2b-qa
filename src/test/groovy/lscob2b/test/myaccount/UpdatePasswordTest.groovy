@@ -1,6 +1,6 @@
 package lscob2b.test.myaccount
 
-import de.hybris.geb.page.hac.console.ImpexImportPage;
+import de.hybris.geb.page.hac.console.ImpexImportPage
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
 import lscob2b.data.UserHelper

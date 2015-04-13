@@ -1,14 +1,12 @@
 package lscob2b.test.login
 
-import de.hybris.geb.page.hac.console.ImpexImportPage;
+import de.hybris.geb.page.hac.console.ImpexImportPage
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
 import lscob2b.data.UserHelper
 import lscob2b.pages.HomePage
 import lscob2b.pages.LoginPage
 import lscob2b.pages.TermsAndConditionPage
-import spock.lang.IgnoreIf
-import spock.lang.IgnoreRest
 
 class LoginTest extends GebReportingSpec {
 
@@ -162,7 +160,7 @@ class LoginTest extends GebReportingSpec {
 			user | _
 			UserHelper.getDefaultCreditCardAndBlockedUser() | _
 	}
-	@IgnoreRest
+
 	def "load impex [/impex/UpdateUsers.impex]"() {
 		setup:
 			browser.go(browser.config.rawConfig.hacUrl)
