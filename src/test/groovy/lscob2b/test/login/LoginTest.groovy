@@ -1,5 +1,6 @@
 package lscob2b.test.login
 
+import spock.lang.IgnoreIf
 import de.hybris.geb.page.hac.console.ImpexImportPage
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
@@ -160,7 +161,8 @@ class LoginTest extends GebReportingSpec {
 			user | _
 			UserHelper.getDefaultCreditCardAndBlockedUser() | _
 	}
-
+	
+	@IgnoreIf({System.getProperty("geb.browser") == "internet explorer"})
 	def "load impex [/impex/UpdateUsers.impex]"() {
 		setup:
 			browser.go(browser.config.rawConfig.hacUrl)

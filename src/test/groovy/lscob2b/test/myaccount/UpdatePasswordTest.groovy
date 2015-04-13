@@ -8,10 +8,11 @@ import lscob2b.pages.HomePage
 import lscob2b.pages.LoginPage
 import lscob2b.pages.myaccount.MyAccountPage
 import lscob2b.pages.myaccount.admin.UpdatePasswordPage
-import spock.lang.Ignore
+import spock.lang.IgnoreIf
 
 class UpdatePasswordTest extends GebReportingSpec {
 	
+	@IgnoreIf({System.getProperty("geb.browser") == "internet explorer"})
 	def "load impex [/impex/UpdateUsers.impex]"() {
 		setup:
 		browser.go(browser.config.rawConfig.hacUrl)
