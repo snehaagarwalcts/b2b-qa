@@ -21,13 +21,13 @@ class MenuModule extends Module {
 		
 	def logout() {
 		//Different version of logout button on each environment
-		if(System.getProperty("geb.env") == null || System.getProperty("geb.env").equals("local")) {
-			waitFor { !$("input", value:"logout").emtpy }
-			$("input", value:"logout").click()
-		} else {
+//		if(System.getProperty("geb.env") == null || System.getProperty("geb.env")== "local") {
+//			waitFor { !$("input", value:"logout").empty }
+//			$("input", value:"logout").click()
+//		} else {
 			waitFor { !$("div#loginInfo").empty }
 			$("div#loginInfo").click()
 			browser.go(browser.config.rawConfig.hacUrl + "/j_spring_security_logout")
 		}
-	}
+//	}
 }

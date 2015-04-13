@@ -50,6 +50,8 @@ INSERT_UPDATE B2BCustomer;uid[unique=true];agree;originalUid;email;title(code);n
 ;admin@unit-3;true;admin@unit-3;admin@unit-3;Mr.;"Docker Admin";"Docker";"Admin";0000010012;NOR701,automated-unit-3,b2badmingroup;automated-unit-3;true
 ;cust@unit-3;true;cust@unit-3;cust@unit-3;Ms.;"Docker Customer";"Docker";"Customer";0000010013;NOR701,automated-unit-3,b2bcustomergroup;automated-unit-3;true
 ;finance@unit-3;true;finance@unit-3;finance@unit-3;Mr.;"Docker Finance";"Docker";"Finance";0000010014;NOR701,automated-unit-3,b2bfinancegroup;automated-unit-3;true
+;update@password-1;true;update@password-1;update@password-1;Mr.;"Levis Customer";"Levis";"Customer";0000010005;NOR701,automated-unit-1,b2bcustomergroup;automated-unit-1;true
+;term@condition-1;false;term@condition-1;term@condition-1;Mr.;"Levis Customer";"Levis";"Customer";0000010005;NOR701,automated-unit-1,b2bcustomergroup;automated-unit-1;true
 
 INSERT_UPDATE B2BCustomer;uid[unique=true];agree;originalUid;email;title(code);name;firstName;lastName;customerID;groups(uid);defaultB2BUnit(uid);active;sendEmailEnabled[default=false];$setPassword
 ;super@unit-4;true;super@unit-4;super@unit-4;Ms.;"Levis SuperUser";"Levis";"SuperUser";0000010001;automated-unit-4-blockeduser,b2badmingroup,b2bcustomergroup,b2bfinancegroup;automated-unit-4-blockeduser;true
