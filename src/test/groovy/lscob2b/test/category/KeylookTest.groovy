@@ -38,6 +38,6 @@ public class KeylookTest extends GebReportingSpec {
 			
 		where:
 			user | link
-			UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_SUPER) | "en/keylook/levisKeyLook1" 
+			UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_SUPER) | "keylook/levisKeyLook1" 
 	}			
 }
