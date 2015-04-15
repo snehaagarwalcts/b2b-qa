@@ -20,7 +20,7 @@ class CartPage extends Page{
 		
 		continueShopping { $(".cartButtons").find('a', href: endsWith('/')) }
 		
-		linkCheckout(required: false) { $("a.checkout") }
+		linkCheckout(required: false) { $(".button-large.checkout") }
 		
 		editQuantities(required: false) { $(".itemButtons a.btn-white") }
 		

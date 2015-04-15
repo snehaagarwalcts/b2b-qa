@@ -1,7 +1,6 @@
 package lscob2b.test.myaccount
 
 import geb.spock.GebReportingSpec
-
 import lscob2b.data.PageHelper
 import lscob2b.data.ProductHelper
 import lscob2b.data.UserHelper
@@ -13,9 +12,7 @@ import lscob2b.pages.myaccount.OrderDetailPage
 import lscob2b.pages.myaccount.OrderHistoryPage
 import lscob2b.pages.orderconfirmation.OrderConfirmationPage
 import lscob2b.pages.productdetails.ProductDetailsPage
-import spock.lang.IgnoreIf
 
-@IgnoreIf({System.getProperty("geb.env") == "preprod"})
 class PerformanceTest extends GebReportingSpec {
 
 	

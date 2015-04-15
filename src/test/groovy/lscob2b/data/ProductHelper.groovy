@@ -69,6 +69,9 @@ class ProductHelper  {
 		null
 	}
 	
-	
+	def static String[] getBulkOrderProduct(brand) {
+		if(brand == BRAND_LEVIS) return [ "00501-0039", "00501-0113" ]
+		null
+	}
 	
 }
