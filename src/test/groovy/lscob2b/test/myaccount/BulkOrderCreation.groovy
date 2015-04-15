@@ -61,8 +61,8 @@ class BulkOrderCreation extends GebReportingSpec{
 
 		when: "At HomePage"
 		at HomePage
-
 		then: "Add multiple products to cart"
+		
 		  for(productCode in targetProductCode){
 		  browser.go(baseUrl + "p/" + productCode)
 		  at ProductDetailsPage
