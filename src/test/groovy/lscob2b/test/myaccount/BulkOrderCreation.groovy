@@ -37,8 +37,10 @@ class BulkOrderCreation extends GebReportingSpec{
 		  at ProductDetailsPage
 		  
 		  then: "Add product to cart"
-		  waitFor { !sizingGrid.empty }
-		  sizingGrid.addLimitedStockQuantityToCart(1)
+//		  waitFor { !sizingGrid.empty }
+//		  sizingGrid.addLimitedStockQuantityToCart(1)
+		  addFullStockOrderQuantity("1")
+		  sizingGrid.buttonAddToCart.click()
 
 		  and: "go to Checkout Page"
 		  browser.go(baseUrl + "checkout/single/summary")
@@ -61,13 +63,15 @@ class BulkOrderCreation extends GebReportingSpec{
 
 		when: "At HomePage"
 		at HomePage
-		then: "Add multiple products to cart"
 		
-		  for(productCode in targetProductCode){
+		then: "Add multiple products to cart"
+		for(productCode in targetProductCode){
 		  browser.go(baseUrl + "p/" + productCode)
 		  at ProductDetailsPage
-		  waitFor { !sizingGrid.empty }
-		  sizingGrid.addLimitedStockQuantityToCart(1)
+//		  waitFor { !sizingGrid.empty }
+//		  sizingGrid.addLimitedStockQuantityToCart(1)
+		  addFullStockOrderQuantity("1")
+		  sizingGrid.buttonAddToCart.click()
 		}
 
 		and: "go to Checkout Page"
