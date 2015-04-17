@@ -1,4 +1,4 @@
-package lscob2b.test.productdetails;
+package lscob2b.test.productdetails
 
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
