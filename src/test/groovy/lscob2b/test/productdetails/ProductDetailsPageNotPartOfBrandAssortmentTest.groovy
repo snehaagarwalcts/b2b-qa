@@ -10,7 +10,6 @@ import lscob2b.pages.productdetails.ProductDetailsPage
 import lscob2b.test.data.User
 import spock.lang.Stepwise
 
-@Stepwise
 class ProductDetailsPageNotPartOfBrandAssortmentTest extends GebReportingSpec {
 
 	def static User user = UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_CUSTOMER)
@@ -19,10 +18,8 @@ class ProductDetailsPageNotPartOfBrandAssortmentTest extends GebReportingSpec {
 
 	def setupSpec() {
 		PageHelper.gotoPageLogout(browser,baseUrl)
-
 		at LoginPage
 		login(user)
-
 		at HomePage
 	}
 
