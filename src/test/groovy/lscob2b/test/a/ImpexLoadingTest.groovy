@@ -8,7 +8,6 @@ import de.hybris.geb.page.hac.HomePage
 import de.hybris.geb.page.hac.LoginPage
 import de.hybris.geb.page.hac.console.ImpexImportPage
 
-
 @Stepwise
 @IgnoreIf({System.getProperty("geb.browser") == "internet explorer"})
 class ImpexLoadingTest extends GebReportingSpec {
@@ -48,7 +47,7 @@ class ImpexLoadingTest extends GebReportingSpec {
 		then: "check import result"
 			checkNotification()
 	}
-	
+
 	def "load impex [/impex/LevisProducts.impex]"() {
 		setup:
 			browser.go(browser.config.rawConfig.hacUrl)
@@ -68,7 +67,7 @@ class ImpexLoadingTest extends GebReportingSpec {
 		then: "check import result"
 			checkNotification()
 	}
-	
+
 	def "load impex [/impex/OutOfStock.impex]"() {
 		setup:
 			browser.go(browser.config.rawConfig.hacUrl)
@@ -88,7 +87,7 @@ class ImpexLoadingTest extends GebReportingSpec {
 		then: "check import result"
 			checkNotification()
 	}
-	
+
 	def "load impex [/impex/Tessi_Test_Order.impex]"() {
 		setup:
 			browser.go(browser.config.rawConfig.hacUrl)
@@ -109,7 +108,7 @@ class ImpexLoadingTest extends GebReportingSpec {
 		then: "check import result"
 			checkNotification()
 	}
-	
+
 	def "logout from HAC"() {
 		setup:
 			browser.go(browser.config.rawConfig.hacUrl)
