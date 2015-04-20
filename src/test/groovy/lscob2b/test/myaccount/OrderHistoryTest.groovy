@@ -1,7 +1,5 @@
 package lscob2b.test.myaccount
 
-import spock.lang.Ignore;
-import spock.lang.IgnoreRest;
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
 import lscob2b.data.ProductHelper
@@ -162,15 +160,15 @@ class OrderHistoryTest extends GebReportingSpec {
 		at OrderHistoryPage
 		
 		then: "check content of order history page"
-		assert ordersFoundLabel.text() - ~/\d+\s+/ == "ORDERS FOUND"
-		assert sortByLabel.text()=="SORT BY:"
-		assert datePlacedLabel.text()=="DATE PLACED"
-		assert orderNumberLabel.text()=="ORDER NUMBER"
-		assert orderStatusLabel.text()=="ORDER STATUS"
-		assert orderTypeLabel.text()=="ORDER TYPE"
-		assert totalLabel.text()=="TOTAL"
-		assert orderSourceLabel.text()=="ORDER SOURCE"
-		assert invoiceLabel.text()=="INVOICE"
+		ordersFoundLabel.displayed
+		sortByLabel.displayed
+		datePlacedLabel.displayed
+		orderNumberLabel.displayed
+		orderStatusLabel.displayed
+		orderTypeLabel.displayed
+		totalLabel.displayed
+		orderSourceLabel.displayed
+		invoiceLabel.displayed
 		
 		where:
 		user | _

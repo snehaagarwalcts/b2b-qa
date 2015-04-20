@@ -19,6 +19,8 @@ class ManageUsersPage extends Page{
 		tableUsers(required:false) { $("table#manage_user") }
 		
 		buttonCreateNewUser { $("a.addnewuser") }
+		
+		breadcrumbLink { $('#breadcrumb>ul>li:nth-child(5)') }
 
 	}
 	

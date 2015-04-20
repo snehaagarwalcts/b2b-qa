@@ -20,9 +20,7 @@ class OrderSearchPage extends Page {
 		sizingGrid { module SizingGridModule}
 		checkOut { module CheckOutModule}
 				
-		messageText { $('div.title_holder h2') }
-		
-		/**/
+		messageText { $('div.content h2') }
 		
 		paginationBar { $("div.paginationBar") }
 		
@@ -31,6 +29,6 @@ class OrderSearchPage extends Page {
 	}
 	
 	def checkMessageTextExists(){
-		messageText
+		messageText.displayed
 	}
 }

@@ -10,8 +10,6 @@ import lscob2b.pages.myaccount.MyAccountPage
 import lscob2b.pages.myaccount.OrderHistoryPage
 import lscob2b.pages.myaccount.ProfilePage
 import lscob2b.pages.myaccount.admin.ManageUsersPage
-import spock.lang.Ignore
-import spock.lang.IgnoreRest
 
 class MyAccountTest extends GebReportingSpec {
 
@@ -152,7 +150,7 @@ class MyAccountTest extends GebReportingSpec {
 			masterTemplate.breadCrumbs.size() == 3
 			assert !masterTemplate.breadCrumbHref("/").empty
 			assert !masterTemplate.breadCrumbHref("my-account").empty
-//			assert masterTemplate.breadCrumbActive.text() == "MANAGE USERS"		//FIXME missing css class 'active'
+			assert breadcrumbLink.text() == "MANAGE USERS"		//FIXME missing css class 'active'
 			
 		and: "Check page element"
 			!buttonCreateNewUser.empty

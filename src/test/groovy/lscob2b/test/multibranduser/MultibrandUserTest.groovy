@@ -1,11 +1,11 @@
 package lscob2b.test.multibranduser
 
-import spock.lang.IgnoreRest;
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
 import lscob2b.data.UserHelper
 import lscob2b.pages.HomePage
 import lscob2b.pages.LoginPage
+import lscob2b.pages.OrderSearchPage
 
 class MultibrandUserTest extends GebReportingSpec {
 
@@ -167,23 +167,25 @@ class MultibrandUserTest extends GebReportingSpec {
 		at HomePage
 
 		then: "Check SwitchTo Docker"
-		waitFor {
-			masterTemplate.levisLogo.empty
-			!masterTemplate.dockersLogo.empty
-		}
+		waitFor {masterTemplate.levisLogo.empty
+				!masterTemplate.dockersLogo.empty}
+		
+		and: "Search for Levis products"
+		masterTemplate.doSearch('501 Levis Original Fit Homestead')
+		at OrderSearchPage
+
+		then: "Search for Dockers products"
+		masterTemplate.doSearch('dockers')
+		
+		when: "at OrderSearchPage"
+		at OrderSearchPage
+		
+		then: "verify ResultNotFound message"
+		waitFor { checkMessageTextExists() }
 
 		where:
 		user = UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_CUSTOMER)
 
-		//FIXME use more robust check (ex. product detail)
-		//		and: "Search for Levis products"
-		//			masterTemplate.doSearch('501 Levis Original Fit Homestead')
-		//			at OrderSearchPage
-		//
-		//		then: "Search for Dockers products"
-		//			masterTemplate.doSearch('dockers')
-		//			at OrderSearchPage
-		//			waitFor { checkMessageTextExists() }
 	}
 
 	/**
@@ -203,22 +205,24 @@ class MultibrandUserTest extends GebReportingSpec {
 		at HomePage
 
 		then: "Check SwitchTo Levis"
-		waitFor {
-			!masterTemplate.levisLogo.empty
-			masterTemplate.dockersLogo.empty
-		}
+		waitFor {!masterTemplate.levisLogo.empty
+				 masterTemplate.dockersLogo.empty}
+		
+		and: "Search for Dockers products"
+		masterTemplate.doSearch('Bogan Woven-Leather Belt')
+		at OrderSearchPage
+
+		then: "Search for Levis products"
+		masterTemplate.doSearch('501 Levis Original Fit Homestead')
+		
+		when: "at OrderSearchPage"
+		at OrderSearchPage
+		
+		then: "verify ResultNotFound message"
+		waitFor { checkMessageTextExists() }
 
 		where:
 		user = UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_CUSTOMER)
 
-		//FIXME use more robust check (ex. product detail)
-		//		and: "Search for Dockers products"
-		//			masterTemplate.doSearch('dockers')
-		//			at OrderSearchPage
-		//
-		//		then: "Search for Levis products"
-		//			masterTemplate.doSearch('501 Levis Original Fit Homestead')
-		//			at OrderSearchPage
-		//			waitFor { checkMessageTextExists() }
 	}
 }
