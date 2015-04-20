@@ -47,7 +47,8 @@ hacPassword = "nimda"
 // when system property 'geb.env' is set to 'integration000'
 environments {
 	preprod {
-		baseUrl = "https://b2bpreprod-000-web-000.lsco-b2b.com/"
+		//baseUrl = "https://b2bpreprod-000-web-000.lsco-b2b.com/"
+		baseUrl = "http://preprod-origin.lsco-b2b.com/en/"
 		hacUrl = "http://b2bpreprod-000-cron-000.lsco-b2b.com:9001/hac/"
 		hacUsername = "admin"
 		hacPassword = "nimda"

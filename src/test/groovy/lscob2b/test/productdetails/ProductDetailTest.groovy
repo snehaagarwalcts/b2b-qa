@@ -35,7 +35,7 @@ class ProductDetailTest extends GebReportingSpec {
 	 */
 	def "Add to cart from product details page"(){
 		setup:
-			PageHelper.gotoPageProductDetail(browser,browser.getCurrentUrl(),targetProductCode)
+			PageHelper.gotoPageProductDetail(browser,baseUrl,targetProductCode)
 				
 		when: "at product detail page"
 			at ProductDetailsPage
@@ -54,7 +54,7 @@ class ProductDetailTest extends GebReportingSpec {
 	
 	def "Check cartpage status"(){
 		setup:
-			PageHelper.gotoPageProductDetail(browser,browser.getCurrentUrl(),targetProductCode)
+			PageHelper.gotoPageProductDetail(browser,baseUrl,targetProductCode)
 	
 		when: "at product detail page"
 			at ProductDetailsPage
