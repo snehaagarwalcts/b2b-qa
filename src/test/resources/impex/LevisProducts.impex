@@ -188,7 +188,7 @@ $target=target(code, $catalogVersion)[unique=true]
 
 
 INSERT_UPDATE ProductReference;$source;$target;referenceType(code)[unique=true];preSelected[default=false];active[default=true]
-;00501-0039;00501-0089;UPSELLING
+#;00501-0039;00501-0089;UPSELLING
 ;00501-0039;00501-0114;UPSELLING
 ;00501-0039;00501-0101;UPSELLING
 ;00501-0039;00501-0113;UPSELLING
