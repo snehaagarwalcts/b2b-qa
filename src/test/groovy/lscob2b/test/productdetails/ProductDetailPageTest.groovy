@@ -1,6 +1,5 @@
 package lscob2b.test.productdetails
 
-import spock.lang.IgnoreRest;
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
 import lscob2b.data.ProductHelper
@@ -65,12 +64,11 @@ class ProductDetailPageTest extends GebReportingSpec {
 		then: "Check Up-Selling product"
 			for(pc in upSellingPCs) { 
 				assert !upSelling.itemLink(pc).empty
+			}	
+		and: "Check Cross-Selling product"
+			for(pc in crossSellingPCs) {
+				assert !crossSelling.itemLink(pc).empty
 			}
-		//TODO update product.json with right product for cross-selling!	
-//		and: "Check Cross-Selling product"
-//			for(pc in crossSellingPCs) {
-//				assert !crossSelling.itemLink(pc).empty
-//			}
 			
 		where:
 			user | productCode | upSellingPCs | crossSellingPCs
