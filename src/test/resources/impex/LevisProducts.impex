@@ -60,8 +60,8 @@ $consolidatedStyle=@consolidatedStyle[$clAttrModifiers]
 ############################################################################################
 
 # Insert Products
-UPDATE Product;code[unique=true];$catalogVersion;$classes;$region;$consolidatedStyle;
-;00501;Levis1512015ProductCatalog:Staged;base;LSE;501
+#UPDATE Product;code[unique=true];$catalogVersion;$classes;$region;$consolidatedStyle;
+#;00501;Levis1512015ProductCatalog:Staged;base;LSE;501
 
 #########################################################################
 $catalog=$brand$season$yearProductCatalog
@@ -90,8 +90,8 @@ $consolidatedStyle=@consolidatedStyle[$clAttrModifiers]
 ############################################################################################
 
 # Insert Products
-UPDATE Product;code[unique=true];$catalogVersion;$classes;$region;$consolidatedStyle;
-;00501;Levis1512015ProductCatalog:Staged;base;LSE;501
+#UPDATE Product;code[unique=true];$catalogVersion;$classes;$region;$consolidatedStyle;
+#;00501;Levis1512015ProductCatalog:Staged;base;LSE;501
 
 ##################################################################################################################################################
 # From /lscob2binitialdata/resources/lscob2binitialdata/import/sampledata/productCatalogs/dockers/products-size-variants.impex
@@ -171,7 +171,6 @@ $supercategories=supercategories(code, $catalogVersion)[mode=append]
 
 UPDATE ApparelStyleVariantProduct;code[unique=true];$supercategories;$catalogVersion[unique=true]
 ;00501-0039;Levis_151_NOR701
-
 
 
 ##################################################################################################################################################
