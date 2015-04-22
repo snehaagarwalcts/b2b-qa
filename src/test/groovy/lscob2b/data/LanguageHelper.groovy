@@ -5,7 +5,7 @@ import groovy.json.JsonSlurper
 
 class LanguageHelper {
 
-	def static final DATA_LANG = "src/test/resources/data/Language.json"
+	def static final DATA_LANG = "src/test/resources/data/Language_full.json"
 	
 	def static getDefaultLang() {
 		return defaultLang
