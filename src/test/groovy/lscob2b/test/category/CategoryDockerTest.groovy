@@ -31,6 +31,6 @@ class CategoryDockerTest extends GebReportingSpec {
 			masterTemplate.subCategoryLink(category, subCategory).displayed
 			
 		where:
-			[category, subCategory] << new File("src/test/resources/data/DockersCategories.txt").readLines()*.tokenize() //TODO Update Category
+			[category, subCategory] << new File("src/test/resources/data/DockersCategories.txt").readLines()*.tokenize()
 	}	
 }

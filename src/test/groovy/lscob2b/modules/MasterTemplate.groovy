@@ -88,7 +88,9 @@ class MasterTemplate extends Module {
 
 		categoryLink { categoryName ->  subNav.find("a", href: endsWith(categoryName)) }
 				
-		subCategoryLink { categoryName,subCategoryName -> subNav.find("a", href: endsWith(categoryName)).parent().parent().find("a",href: endsWith(subCategoryName)) }
+		//subCategoryLink { categoryName,subCategoryName -> subNav.find("a", href: endsWith(categoryName)).parent().parent().find("a",href: endsWith(subCategoryName)) }
+		
+		subCategoryLink { categoryName,subCategoryName -> subNav.find("a", href: endsWith(categoryName)).parent().parent().find("a",title: contains(subCategoryName))}
 		
 		/*Help*/
 		

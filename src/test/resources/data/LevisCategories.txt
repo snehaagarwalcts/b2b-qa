@@ -1,8 +1,29 @@
-Levis_151_Male Levis_151_Male_Bottoms_Long%20Bottoms
-Levis_151_Male Levis_151_Male_Bottoms_Short%20Bottoms
-Levis_151_Male Levis_151_Male_Tops_Knit%20Top
-Levis_151_Female Levis_151_Female_Bottoms_Skirts
-Levis_151_Female Levis_151_Female_Bottoms_Long%20Bottoms
-Levis_151_Female Levis_151_Female_Bottoms_Short%20Bottoms
-Levis_151_Female Levis_151_Female_Tops_DressesJumpers
-Levis_151_Female Levis_151_Female_Tops_Jackets
+Levis_151_Male Trousers
+Levis_151_Male Pants
+Levis_151_Male Shorts
+Levis_151_Male Shirts
+Levis_151_Male Tees
+Levis_151_Male Outwear & Trucker
+Levis_151_Male Icons
+Levis_151_Male 501's
+Levis_151_Male Truckers
+Levis_151_Male Western Shirts
+Levis_151_Male 501 CT
+Levis_151_Male Graphic Tees
+Levis_151_Male Skate / Commuter
+Levis_151_Male White Tab
+Levis_151_Male Line 8
+Levis_151_Female Trouser
+Levis_151_Female Dresses & Skirts
+Levis_151_Female Shorts
+Levis_151_Female Shirts
+Levis_151_Female Jackets & Vests
+Levis_151_Female Icons
+Levis_151_Female 501's
+Levis_151_Female Truckers
+Levis_151_Female Western Shirts
+Levis_151_Female 501 CT
+Levis_151_Female White Tab
+Levis_151_Female Revel
+Levis_151_Female Curve JD
+Levis_151_Female Super Skinny

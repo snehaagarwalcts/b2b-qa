@@ -31,7 +31,7 @@ class CategoryLevisTest extends GebReportingSpec {
 			masterTemplate.subCategoryLink(category, subCategory).displayed
 			
 		where:
-			[category, subCategory] << new File("src/test/resources/data/LevisCategories.txt").readLines()*.tokenize() //TODO update category
+			[category, subCategory] << new File("src/test/resources/data/LevisCategories.txt").readLines()*.tokenize()
 	}
 	
 }
