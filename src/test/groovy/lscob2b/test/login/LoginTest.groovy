@@ -161,7 +161,7 @@ class LoginTest extends GebReportingSpec {
 			user | _
 			UserHelper.getDefaultCreditCardAndBlockedUser() | _
 	}
-	
+
 	@IgnoreIf({System.getProperty("geb.browser") == "internet explorer"})
 	def "load impex [/impex/UpdateUsers.impex]"() {
 		setup:
@@ -188,8 +188,8 @@ class LoginTest extends GebReportingSpec {
 		then: "check import result"
 			checkNotification()
 			
-		cleanup:
-			menu.logout()
+//		cleanup:
+//			menu.logout()
 	}
 	
 	/**
