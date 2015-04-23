@@ -38,8 +38,8 @@ class UpdatePasswordTest extends GebReportingSpec {
 		then: "check import result"
 		checkNotification()
 			
-		cleanup:
-		menu.logout()
+//		cleanup:
+//		menu.logout()
 	}
 	
 	/**
