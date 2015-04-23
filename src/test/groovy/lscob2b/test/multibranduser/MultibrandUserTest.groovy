@@ -170,18 +170,17 @@ class MultibrandUserTest extends GebReportingSpec {
 		waitFor {masterTemplate.levisLogo.empty
 				!masterTemplate.dockersLogo.empty}
 		
-		and: "Search for Levis products"
+		when: "Search for Levis products"
 		masterTemplate.doSearch('501 Levis Original Fit Homestead')
+		
+		then: "at OrderSearchPage"
 		at OrderSearchPage
 
-		then: "Search for Dockers products"
+		when: "Search for Dockers products"
 		masterTemplate.doSearch('dockers')
 		
-		when: "at OrderSearchPage"
+		then: "at OrderSearchPage"
 		at OrderSearchPage
-		
-		then: "verify ResultNotFound message"
-		waitFor { checkMessageTextExists() }
 
 		where:
 		user = UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_CUSTOMER)
@@ -208,18 +207,17 @@ class MultibrandUserTest extends GebReportingSpec {
 		waitFor {!masterTemplate.levisLogo.empty
 				 masterTemplate.dockersLogo.empty}
 		
-		and: "Search for Dockers products"
+		when: "Search for Dockers products"
 		masterTemplate.doSearch('Bogan Woven-Leather Belt')
+		
+		then: "at OrderSearchPage"
 		at OrderSearchPage
 
-		then: "Search for Levis products"
+		when: "Search for Levis products"
 		masterTemplate.doSearch('501 Levis Original Fit Homestead')
 		
-		when: "at OrderSearchPage"
+		then: "at OrderSearchPage"
 		at OrderSearchPage
-		
-		then: "verify ResultNotFound message"
-		waitFor { checkMessageTextExists() }
 
 		where:
 		user = UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_CUSTOMER)

@@ -1,4 +1,4 @@
 {
 	"default": "en",
-	"languages": ["en", "sv", "ru", "cs", "hu", "pt", "de", "fr", "fi", "no", "da", "pl", "el", "tr", "nl", "it", "es" ]
+	"languages": ["en", "de", "sv", "no", "fi", "pt", "fr", "cs", "pl", "hu", "el", "tr", "it", "es", "da", "nl"]
 }
