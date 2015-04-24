@@ -28,6 +28,7 @@ class ContactUsAfterLoginTest extends GebReportingSpec {
 
 		then: "Click on contact us"
 		masterTemplate.doContactUs()
+		browser.go(baseUrl+link)
 
 		and: "at Contact Us page"
 		at ContactUsPage
@@ -42,10 +43,10 @@ class ContactUsAfterLoginTest extends GebReportingSpec {
 		//country == "United Kingdom"//user.country
 
 		where:
-		user | _
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_SUPER) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_ADMIN) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_CUSTOMER) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_FINANCE) | _
+		user | link
+		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_SUPER) | "contactus"
+		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_ADMIN) | "contactus"
+		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_CUSTOMER) | "contactus"
+		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_FINANCE) | "contactus"
 	}
 }
