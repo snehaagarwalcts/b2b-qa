@@ -50,7 +50,13 @@ class BulkOrderCreation extends GebReportingSpec{
 		  at CheckOutPage
 		  
 		  then: "Place Order"
-		  doPlaceOrder()
+		  //doPlaceOrder()
+		  Thread.sleep(2000)
+		  waitFor { placeOrderLink.displayed }
+		  placeOrderLink.click()
+		  Thread.sleep(2000)
+		  waitFor { placeOrderLink.displayed }
+		  placeOrderLink.click()
 		  
 		  where:
 		  i << (1..2)
@@ -82,7 +88,13 @@ class BulkOrderCreation extends GebReportingSpec{
 		at CheckOutPage
 		
 		then: "Place Order"
-		doPlaceOrder()
+		//doPlaceOrder()
+		Thread.sleep(2000)
+		waitFor { placeOrderLink.displayed }
+		placeOrderLink.click()
+		Thread.sleep(2000)
+		waitFor { placeOrderLink.displayed }
+		placeOrderLink.click()
 		
 		where:
 		i << (1..2)
