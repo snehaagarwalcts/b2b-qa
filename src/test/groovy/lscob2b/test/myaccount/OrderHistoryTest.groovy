@@ -34,6 +34,7 @@ class OrderHistoryTest extends GebReportingSpec {
 		//Cart
 		at CartPage
 		linkCheckout.click()
+		to CheckOutPage
 
 		//Checkout
 		at CheckOutPage
