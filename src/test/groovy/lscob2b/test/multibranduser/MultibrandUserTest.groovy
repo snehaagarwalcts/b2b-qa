@@ -9,16 +9,10 @@ import lscob2b.pages.OrderSearchPage
 
 class MultibrandUserTest extends GebReportingSpec {
 
-	def setupSpec() {
-		PageHelper.gotoPageLogout(browser,baseUrl)
-	}
-
 	def setup() {
+		PageHelper.gotoPageLogout(browser,baseUrl)
 		to LoginPage
-	}
-
-	def cleanup() {
-		masterTemplate.doLogout()
+		at LoginPage
 	}
 
 	/**
