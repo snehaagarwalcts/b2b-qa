@@ -1,13 +1,12 @@
 package lscob2b.test.myaccount
 
-import spock.lang.IgnoreRest;
 import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
 import lscob2b.data.ProductHelper
 import lscob2b.data.UserHelper
 import lscob2b.pages.HomePage
 import lscob2b.pages.LoginPage
-import lscob2b.pages.cart.CartPage;
+import lscob2b.pages.cart.CartPage
 import lscob2b.pages.checkout.CheckOutPage
 import lscob2b.pages.myaccount.admin.EditUserDetailsPage
 import lscob2b.pages.myaccount.admin.ManageUsersPage
@@ -176,6 +175,7 @@ class ManageUserTest extends GebReportingSpec {
 
 		then:"click checkout"
 		checkOutLink.click() //issue with firefox
+		to CheckOutPage
 
 		when: "at Checkout page"
 		at CheckOutPage
