@@ -1,12 +1,11 @@
 package lscob2b.data
 
-import java.util.List;
-import java.util.Map;
-
+import java.util.List
+import java.util.Map
 import groovy.json.JsonSlurper
 import lscob2b.test.data.Address
-import lscob2b.test.data.B2BUnit;
-import lscob2b.test.data.Product;
+import lscob2b.test.data.B2BUnit
+import lscob2b.test.data.Product
 import lscob2b.test.data.User
 
 class UserHelper  {
