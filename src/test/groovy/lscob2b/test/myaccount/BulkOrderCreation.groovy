@@ -84,6 +84,6 @@ class BulkOrderCreation extends GebReportingSpec{
 		doPlaceOrder()
 		
 		where:
-		i << (1..100)
+		i << (1..2)
 	 }
 }
