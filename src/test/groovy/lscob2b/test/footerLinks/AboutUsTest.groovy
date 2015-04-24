@@ -27,6 +27,7 @@ class AboutUsTest extends GebReportingSpec{
 		and: "click on AboutUs Link"
 		waitFor{ masterTemplate.aboutUsLink.displayed }
 		masterTemplate.aboutUsLink.click()
+		browser.go(PageHelper.PAGE_ABOUT_US)
 		
 		then:"check that user navigates to AboutUs page"
 		waitFor { title == "Who We Are | Levi Strauss" }

@@ -28,15 +28,16 @@ class TermsAndConditionsTest extends GebReportingSpec{
 		and: "click on TermsAndConditions Link"
 		waitFor{ masterTemplate.termsAndConditionsLink.displayed }
 		masterTemplate.termsAndConditionsLink.click()
+		browser.go(baseUrl+link)
 		
 		then:"check that user navigates to TermsAndConditions page"
 		at TermsAndConditionPage
 		
 		where:
-		user | _
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_SUPER) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_DOCKERS, UserHelper.ROLE_ADMIN) | _
-		UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_CUSTOMER) | _
+		user | link
+		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_SUPER) | "termsAndConditions"
+		UserHelper.getUser(UserHelper.B2BUNIT_DOCKERS, UserHelper.ROLE_ADMIN) | "termsAndConditions"
+		UserHelper.getUser(UserHelper.B2BUNIT_MULTIBRAND, UserHelper.ROLE_CUSTOMER) | "termsAndConditions"
 	}
 
 }

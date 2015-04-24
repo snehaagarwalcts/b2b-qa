@@ -31,6 +31,7 @@ class SiteMapTest extends GebReportingSpec{
 		then: "click on SiteMap Link"
 		waitFor{ masterTemplate.siteMapLink.displayed }
 		masterTemplate.siteMapLink.click()
+		browser.go(baseUrl+link)
 		
 		when: "at SiteMap page"
 		at SiteMapPage
@@ -51,10 +52,10 @@ class SiteMapTest extends GebReportingSpec{
 			}
 								
 		where:
-		user | pageLinks
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_SUPER) | ["profile", "address-book", "manage-users", "orders", "balance"]
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_ADMIN) | ["profile", "address-book", "manage-users" ]
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_CUSTOMER) | ["profile", "address-book", "orders" ]
-		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_FINANCE) | ["profile", "address-book", "balance"]	
+		user | pageLinks | link
+		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_SUPER) | ["profile", "address-book", "manage-users", "orders", "balance"] |"/sitemap"
+		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_ADMIN) | ["profile", "address-book", "manage-users" ] |"/sitemap"
+		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_CUSTOMER) | ["profile", "address-book", "orders" ] |"/sitemap"
+		UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_FINANCE) | ["profile", "address-book", "balance"] |"/sitemap"	
 	}
 }
