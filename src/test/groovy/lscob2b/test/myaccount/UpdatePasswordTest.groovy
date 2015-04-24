@@ -15,6 +15,7 @@ class UpdatePasswordTest extends GebReportingSpec {
 	@IgnoreIf({System.getProperty("geb.browser") == "internet explorer"})
 	def "load impex [/impex/UpdateUsers.impex]"() {
 		setup:
+		browser.go(browser.config.rawConfig.hacUrl + "/j_spring_security_logout")
 		browser.go(browser.config.rawConfig.hacUrl)
 		at de.hybris.geb.page.hac.LoginPage
 	
@@ -37,7 +38,7 @@ class UpdatePasswordTest extends GebReportingSpec {
 			
 		then: "check import result"
 		checkNotification()
-			
+		
 //		cleanup:
 //		menu.logout()
 	}
