@@ -28,7 +28,7 @@ class FooterLinksTest extends GebReportingSpec{
 		at HomePage
 		
 		then:"check all the Links"  /* Updated By Dipannita */
-		at Home
+		at HomePage
 		Thread.sleep(1000)
 		waitFor{ masterTemplate.aboutUsLink.displayed }
 		waitFor{ masterTemplate.privacyPolicyLink.displayed }
