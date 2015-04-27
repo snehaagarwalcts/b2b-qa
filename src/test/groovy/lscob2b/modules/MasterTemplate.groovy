@@ -14,7 +14,7 @@ class MasterTemplate extends Module {
 		
 		homeLink { $("#breadcrumb li a", href: endsWith('/')) }
 
-		myAccountLink {$('a[href="/en/my-account"]')}
+		myAccountLink {$('.global-nav-list>li:nth-child(3)>a')} /*Updated by dipannita */
 
 		//myAccountLink {$('div.global-nav ul.global-nav-list').find("a.global-nav-hasmenu", href: contains("/my-account"),0)}				
 		
@@ -104,13 +104,13 @@ class MasterTemplate extends Module {
 		
 		termsAndConditionsLink {$('div.footer a[href*="/termsAndConditions"]')}
 		
-		privacyPolicyLink {$('div.footer a[href*="/privacyPolicy"]')}	
+		//privacyPolicyLink {$('div.footer a[href*="/privacyPolicy"]')}	
+		privacyPolicyLink {$(".footer>ul>li:nth-child(5)>a")} /*Updated By Dipannita*/
 		
 		/* Common Links */
 		mainContainerLabel { $('#main-container>h1') }
 		
 		introContainerLabel { $('.intro-container') }
-		
 		alertMessage { $('div.alert-message') }
 		
 		noteMessage { $('div.note-message') }
