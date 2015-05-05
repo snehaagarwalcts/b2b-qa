@@ -12,7 +12,7 @@ import spock.lang.IgnoreIf
 
 class UpdatePasswordTest extends GebReportingSpec {
 	
-	@IgnoreIf({System.getProperty("geb.browser") == "internet explorer"})
+	//@IgnoreIf({System.getProperty("geb.browser") == "internet explorer"})
 	def "load impex [/impex/UpdateUsers.impex]"() {
 		setup:
 		browser.go(browser.config.rawConfig.hacUrl + "/j_spring_security_logout")

@@ -1,6 +1,5 @@
-#########################################################################
-# Updating Existing Users
-#########################################################################
+#Updating Existing Users
+
 $passwordEncoding=md5
 $defaultPassword=Levis2015#
 $setPassword=@password[translator=de.hybris.platform.impex.jalo.translators.ConvertPlaintextToEncodedUserPasswordTranslator][default='$passwordEncoding:$defaultPassword']
