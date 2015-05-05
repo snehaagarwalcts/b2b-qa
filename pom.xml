@@ -251,10 +251,26 @@
 				<test.browser.version>11</test.browser.version>
 			</properties>
 		</profile>
+				<profile>
+			<id>ie10</id>
+			<properties>
+				<test.platform>windows 7</test.platform>
+				<test.browser>internet explorer</test.browser> <!-- {android|chrome|firefox|htmlunit|internet explorer|iPhone|iPad|opera|safari} -->
+				<test.browser.version>10</test.browser.version>
+			</properties>
+		</profile>
+				<profile>
+			<id>ie9</id>
+			<properties>
+				<test.platform>windows 7</test.platform>
+				<test.browser>internet explorer</test.browser> <!-- {android|chrome|firefox|htmlunit|internet explorer|iPhone|iPad|opera|safari} -->
+				<test.browser.version>9</test.browser.version>
+			</properties>
+		</profile>
 		<profile>
 			<id>ie8</id>
 			<properties>
-				<test.platform>windows</test.platform>
+				<test.platform>windows 7</test.platform>
 				<test.browser>internet explorer</test.browser> <!-- {android|chrome|firefox|htmlunit|internet explorer|iPhone|iPad|opera|safari} -->
 				<test.browser.version>8</test.browser.version>
 			</properties>
@@ -262,17 +278,17 @@
 		<profile>
 			<id>firefox</id>
 			<properties>
-				<test.platform>windows</test.platform>
+				<test.platform>windows 7</test.platform>
 				<test.browser>firefox</test.browser> <!-- {android|chrome|firefox|htmlunit|internet explorer|iPhone|iPad|opera|safari} -->
-				<test.browser.version>34</test.browser.version>
+				<test.browser.version>37</test.browser.version>
 			</properties>
 		</profile>
 		<profile>
 			<id>chrome</id>
 			<properties>
-				<test.platform>windows</test.platform>
+				<test.platform>windows 7</test.platform>
 				<test.browser>chrome</test.browser> <!-- {android|chrome|firefox|htmlunit|internet explorer|iPhone|iPad|opera|safari} -->
-				<test.browser.version>39</test.browser.version>
+				<test.browser.version>42</test.browser.version>
 			</properties>
 		</profile>
 
