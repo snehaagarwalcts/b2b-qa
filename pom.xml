@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<selenium.version>2.43.1</selenium.version>
+		<selenium.version>2.45.0</selenium.version>
 		<spock.version>0.7-groovy-2.0</spock.version>
 		<geb.version>0.10.0</geb.version>
 		<!-- DEFAULT PROPERTIES -->
