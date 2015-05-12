@@ -16,7 +16,7 @@ class BulkOrderCreation extends GebReportingSpec{
 	
 	//def static User user = UserHelper.getUser(UserHelper.B2BUNIT_LEVIS, UserHelper.ROLE_CUSTOMER)
 	//def static User user = new User(email: 'bulk@order-1', password:'Levis2015#')
-	def static User user = new User(email: 'sagarwal1@levi.com', password:'Levis2015#')
+	def static User user = new User(email: 'aroy3@levi.com', password:'Password@1')
 	
 	def static String productcode = ProductHelper.getBulkOrderProduct(ProductHelper.BRAND_LEVIS)[0]
 	
