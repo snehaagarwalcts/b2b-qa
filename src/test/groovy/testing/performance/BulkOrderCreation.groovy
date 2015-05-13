@@ -1,4 +1,4 @@
-package lscob2b.test.myaccount
+package testing.performance
 
 import spock.lang.Ignore
 import lscob2b.data.PageHelper

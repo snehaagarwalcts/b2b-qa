@@ -141,7 +141,7 @@ autoClearCookies = true
 //    }
 //}
 waiting {
-	timeout = 20
+	timeout = 10
 	retryInterval = 0.5
 }
 
