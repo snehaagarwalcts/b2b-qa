@@ -4,13 +4,13 @@ $setPassword=@password[translator=de.hybris.platform.impex.jalo.translators.Conv
 
 #B2BUnit
 INSERT_UPDATE B2BUnit;uid[unique=true];name;country(isocode);userPriceGroup(code);groups(uid)[mode=append];reportingOrganization(uid);orderBlock(code);paymentTerms(code);active
-;0010023029;"Tessi Sold To Party";GB;GB01;010;010;;Z103;true
+;0010020455;"Tessi Sold To Party";GB;GB01;010;010;;Z103;true
 
 INSERT_UPDATE Address;publicKey[unique=true];postalcode;streetname;town;region(isocode);country(isocode);owner(B2BUnit.uid);firstname;lastname;billingAddress;shippingAddress
-;0010023029|0010023029|SP;CO1 1LS;"1a & 1b, Eld Lane,";"Colchester.";GB-CO;GB;0010023029;"Tessi User";;true;false
+;0010020455|0010020455|SP;CO1 1LS;"1a & 1b, Eld Lane,";"Colchester.";GB-CO;GB;0010020455;"Tessi User";;true;false
 
 INSERT_UPDATE B2BCustomer;uid[unique=true];originalUid;email;title(code);name;customerID;groups(uid);defaultB2BUnit(uid);active;sendEmailEnabled[default=false];$setPassword
-;tessi.user@test.com;tessi.user@test.com;tessi.user@test.com;Mr.;"Tessi User";tessi-user-id;0010023029,b2badmingroup,b2bcustomergroup,b2bfinancegroup;0010023029;true
+;tessi.user@test.com;tessi.user@test.com;tessi.user@test.com;Mr.;"Tessi User";tessi-user-id;0010020455,b2badmingroup,b2bcustomergroup,b2bfinancegroup;0010020455;true
 
 INSERT_UPDATE Order;code[unique=true];user(uid);date[dateformat=dd.MM.yyyy HH:mm];currency(isocode);net;deliveryMode(code);Discounts(code);calculated;unit(uid);site(uid);store(uid);invoices
-;1000001111;tessi.user@test.com;01.01.2014 07:56;GBP;false;;;false;0010023029;lscob2b;GB01;0330363335
+;1000001111;tessi.user@test.com;01.01.2014 07:56;GBP;false;;;false;0010020455;lscob2b;GB01;0330363335
