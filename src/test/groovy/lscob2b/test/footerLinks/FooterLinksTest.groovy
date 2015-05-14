@@ -16,7 +16,6 @@ class FooterLinksTest extends GebReportingSpec{
 	
 	/**
 	 * TC BB-853 Automated Test Case: Verify AboutUs Link in Footer section
-	 * TC BB-855 Automated Test Case: Verify Privacy Policy Link in Footer section
 	 * US BB-594 Site Map-->TC BB-839 Automated Test Case: Verify Site Map Link in Footer section
 	 * TC BB-857 Automated Test Case: Verify Terms and Conditions Link in Footer section
 	 */
@@ -27,12 +26,12 @@ class FooterLinksTest extends GebReportingSpec{
 		when:"at Home Page"
 		at HomePage
 		
-		then:"check all the Links"  /* Updated By Dipannita */
+		then:"check all the Links" 
 		at HomePage
 		Thread.sleep(1000)
 		waitFor{ masterTemplate.aboutUsLink.displayed }
-		waitFor{ masterTemplate.privacyPolicyLink.displayed }
-		waitFor{ masterTemplate.siteMapLink.displayed }	
+		waitFor{ masterTemplate.siteMapLink.displayed }
+		waitFor{ masterTemplate.contactUs.displayed }
 		waitFor{ masterTemplate.termsAndConditionsLink.displayed }
 				
 		where:

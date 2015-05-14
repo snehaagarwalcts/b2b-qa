@@ -104,9 +104,6 @@ class MasterTemplate extends Module {
 		
 		termsAndConditionsLink {$('div.footer a[href*="/termsAndConditions"]')}
 		
-		//privacyPolicyLink {$('div.footer a[href*="/privacyPolicy"]')}	
-		privacyPolicyLink {$(".footer>ul>li:nth-child(5)>a")} /*Updated By Dipannita*/
-		
 		/* Common Links */
 		mainContainerLabel { $('#main-container>h1') }
 		

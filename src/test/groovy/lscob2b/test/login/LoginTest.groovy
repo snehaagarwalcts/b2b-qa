@@ -7,7 +7,7 @@ import lscob2b.data.PageHelper
 import lscob2b.data.UserHelper
 import lscob2b.pages.HomePage
 import lscob2b.pages.LoginPage
-import lscob2b.pages.TermsAndConditionPage
+import lscob2b.pages.TermsConditionsAndPrivacyPage
 
 class LoginTest extends GebReportingSpec {
 
@@ -210,7 +210,7 @@ class LoginTest extends GebReportingSpec {
 		login(user)
 
 		then: "at terms and coditions page check agree/disagree displayed"
-		at TermsAndConditionPage
+		at TermsConditionsAndPrivacyPage
 			agreeLinkExists()
 			disagreeLinkExists()
 		
@@ -234,13 +234,13 @@ class LoginTest extends GebReportingSpec {
 		login(user)
 
 		and: "at terms and conditions page"
-		at TermsAndConditionPage
+		at TermsConditionsAndPrivacyPage
 
 		and: "Disgree to terms and conditions"
 		disagreeLinkClick()
 
 		then:"at home page"
-		at TermsAndConditionPage
+		at TermsConditionsAndPrivacyPage
 		
 		where:
 		user = UserHelper.getTermsAndConditionUser()
@@ -262,7 +262,7 @@ class LoginTest extends GebReportingSpec {
 		login(user)
 
 		and: "at terms and conditions page"
-		at TermsAndConditionPage
+		at TermsConditionsAndPrivacyPage
 
 		and: "Agree to terms and conditions"
 		agreeLinkClick()

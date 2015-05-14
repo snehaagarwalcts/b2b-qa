@@ -4,10 +4,10 @@ import lscob2b.data.PageHelper;
 import lscob2b.data.UserHelper;
 import lscob2b.pages.HomePage;
 import lscob2b.pages.LoginPage;
-import lscob2b.pages.TermsAndConditionPage;
+import lscob2b.pages.TermsConditionsAndPrivacyPage;
 import geb.spock.GebReportingSpec;
 
-class TermsAndConditionsTest extends GebReportingSpec{
+class TermsConditionsAndPrivacyTest extends GebReportingSpec{
 		
 	def setup(){
 		PageHelper.gotoPageLogout(browser, baseUrl)
@@ -31,7 +31,7 @@ class TermsAndConditionsTest extends GebReportingSpec{
 		browser.go(baseUrl+link)
 		
 		then:"check that user navigates to TermsAndConditions page"
-		at TermsAndConditionPage
+		at TermsConditionsAndPrivacyPage
 		
 		where:
 		user | link
