@@ -1,0 +1,13 @@
+INSERT_UPDATE StockLevel;productCode[unique=true];warehouse(code)[unique=true];available;inStockStatus(code)[default=notSpecified];maxPreOrder[default=0];maxStockLevelHistoryCount[default=5];overSelling[default=0];preOrder[default=0];reserved[default=0]
+;00501011403030;3001;200
+;00501011303030;3001;200
+;04511165403030;3001;200
+;16882005003030;3001;200
+;00501011403030;3002;200
+;00501011303030;3002;200
+;04511165403030;3002;200
+;16882005003030;3002;200
+;00501011403030;3003;200
+;00501011303030;3003;200
+;04511165403030;3003;200
+;16882005003030;3003;200

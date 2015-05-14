@@ -5,11 +5,14 @@ import geb.spock.GebReportingSpec
 import lscob2b.data.PageHelper
 import lscob2b.data.ProductHelper
 import lscob2b.data.UserHelper
+import lscob2b.pages.HomePage
 import lscob2b.pages.LoginPage
 import lscob2b.pages.productdetails.ProductDetailsPage
 import lscob2b.test.data.User
 
 class AddToWaitList extends GebReportingSpec{
+	
+	def static targetProductCode = ProductHelper.getWaitlistBulkProduct()
 	
 	def "load impex [/impex/OutOfStock_WaitList.impex]"() {
 		setup:
@@ -36,6 +39,10 @@ class AddToWaitList extends GebReportingSpec{
 			
 		then: "check import result"
 			checkNotification()
+			
+		cleanup:
+			Thread.sleep(500)
+			menu.logout()
 	}
 	
 	def "Add products to waitlist for multiple users"(){
@@ -43,30 +50,23 @@ class AddToWaitList extends GebReportingSpec{
 		PageHelper.gotoPageLogout(browser, baseUrl)
 		to LoginPage
 		at LoginPage
-		login(user)
-		browser.go(baseUrl + "p/" + productcode)
-		
-		when: "at Product Details Page"
-		at ProductDetailsPage
+		login(new User(email: 'perf@superuser-'+i, password:'Levis#101'))
+
+		when: "At HomePage"
+		at HomePage
 		
 		then: "Add product to waitlist"
-		addOutOfStockQuantityToWaitList(2)
+		for(productCode in targetProductCode){
+			browser.go(baseUrl + "p/" + productCode)
+			at ProductDetailsPage
+			addOutOfStockQuantityToWaitList(1)
+		  }	
 		
 		where:
-		user | productcode
-		new User(email: 'perf@superuser-1', password:'Levis#101') | ProductHelper.getWaitlistBulkProduct()[0]
-		new User(email: 'perf@superuser-2', password:'Levis#101') | ProductHelper.getWaitlistBulkProduct()[1]
-		new User(email: 'perf@superuser-3', password:'Levis#101') | ProductHelper.getWaitlistBulkProduct()[2]
-		new User(email: 'perf@superuser-4', password:'Levis#101') | ProductHelper.getWaitlistBulkProduct()[3]
-		new User(email: 'perf@superuser-5', password:'Levis#101') | ProductHelper.getWaitlistBulkProduct()[4]
-		new User(email: 'perf@superuser-6', password:'Levis#101') | ProductHelper.getWaitlistBulkProduct()[5]
-		new User(email: 'perf@superuser-7', password:'Levis#101') | ProductHelper.getWaitlistBulkProduct()[6]
-		new User(email: 'perf@superuser-8', password:'Levis#101') | ProductHelper.getWaitlistBulkProduct()[7]
-		new User(email: 'perf@superuser-9', password:'Levis#101') | ProductHelper.getWaitlistBulkProduct()[8]
-		new User(email: 'perf@superuser-10', password:'Levis#101') | ProductHelper.getWaitlistBulkProduct()[9]
+		i << (1..100)
 	}
 	
-	def "load impex [/impex/UpdateInStockLowerQuantity.impex]"() {
+	def "load impex [/impex/UpdateInStock_WaitList.impex]"() {
 		setup:
 			browser.go(browser.config.rawConfig.hacUrl + "/j_spring_security_logout")
 			browser.go(browser.config.rawConfig.hacUrl)
@@ -87,10 +87,14 @@ class AddToWaitList extends GebReportingSpec{
 		
 		and: "load impex in HAC"
 			setLegacyMode(true)
-			importTextScript(getClass().getResource('/impex/UpdateInStockLowerQuantity.impex').text)
+			importTextScript(getClass().getResource('/impex/UpdateInStock_WaitList.impex').text)
 			
 		then: "check import result"
 			checkNotification()
+			
+		cleanup:
+			Thread.sleep(500)
+			menu.logout()
 	}
 
 }
