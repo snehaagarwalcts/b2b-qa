@@ -1,5 +1,5 @@
 **************************Q1**********************************
-1COD Responsibilities
+1COD Roles and Responsibilities
 
 * Offshore POC for 1COD.
 * Responsible for Task Allocation.
@@ -9,11 +9,12 @@
 
 Impact - High because 1COD had high client visibility.
 
-1COD - Execution, Development and Maintenance for CODE Drop 4
+1COD - UFT AUtomation - Execution, Development and Maintenance post CODE Drop 4
 
 * Performed Execution of 1COD RTT scripts in 3-4 Branch Machines parallely which was quite challenging.
 * Developed 11 scripts related to 1COD component wise testing and executed them for 100 times each(100*10 = 1000 times) within a week.
 * As proper Response time capture is dependent upon Code quality, we had to optimize our code at the time of Script development.
+* Got appreciation from ART EGS Manager (Malathi) and CTS onsite Manager for my work in 1COD.
 
 Impact - High because 1COD was quite a challenging project due to enumerous executions performed within short time span.
 
@@ -30,11 +31,45 @@ KT and Documentation
 
 * Prepared document on concept of adding shared objects in UFT and shared the same with entire team.
 * Provided KT regarding UFT and FLEX framework to the new joinees in the team.
-* Involved in Script Review of Test Scripts developed by new joinees.
+* Involved in Script Review of Test Scripts(using UFT) developed by new joinees.
 * Also, helped the new joinees with there deliverables whenever required.
 
 Impact - High
 
 ******************************************Q2********************************************************
 
+1COD - UFT AUtomation - Execution, Development and Maintenance post CODE Drop 5
 
+* Implemented Framework level changes in 1COD Automation framework as per client's requirement.
+* Performed code optimization of both 1COD RTT and Component related scripts in order to implement maximum wait time of 900 seconds (client requirement).
+* Completed 1COD execution of 200+ scripts for 8 PPIDs (~200*8 = 1600 scripts) within stringent time-line of 15 days.
+* Worked in Shifts to maintain 24 hours execution window for 1COD.
+* Got appreciation from ART EGS Manager (Malathi) for my work in 1COD.
+
+Impact - High because 1COD was quite a challenging project due to enumerous executions performed within short time span.
+
+1BW - Java-Selenium Automation - Execution, Development and Maintenance
+
+* Started actively working in 1BW Automation using Java Selenium from Day 1 of allocation in the project.
+* Developed and performed maintenance of test scripts using Java-Selenium.
+* Performed Multibrowser execution (IE/Firefox/Chrome) for all the test cases developed using Java-Selenium.
+* Performed feasibility analysis of Manual Test cases well.
+
+Impact - High
+
+KT and Documentation
+
+* Provided KT of 1COD to new Onsite POC(Aneesh) for around 2 weeks on daily basis.
+* Provided Java-Selenium framework KT to the new joinees in the team.
+* Involved in Script Review of Test Scripts(using Java Selenium) developed by new joinees.
+* Also, helped the new joinees with there deliverables whenever required.
+
+Impact - High
+
+Others
+
+* Learnt Mobile/Tablet Automation using Mobile labs and UFT within short time frame and started actively working in 1BW mobile/tablet automation.
+* Performed Admin Rights Requirement Testing by executing 1CMX and 1COD suites in both Local and Branch Machines.
+* Developed Test Scripts of 1AEG application(Patch Automation) for 1 week.
+
+Impact - High
