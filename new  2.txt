@@ -1,0 +1,246 @@
+
+public static String label_InvestOnline = "//h1[contains(text(),'Invest Anytime, from Anywhere')]";
+/////////////////
+	public static String link_WhatShouldUExpect="//a[@href='relationship/what-to-expect.htm']";
+	public static String link_GettingToKnowU="//a[@href='relationship/prepare-for-your-consultation.htm']";
+	public static String link_WhatRUPaying="//a[@href='relationship/fees-commissions.htm']";
+	public static String link_EnvPlan="//a[@href='financial-plan/envision.htm']";
+	public static String link_RetirementPlan="//a[@href='financial-plan/retirement-income-process.htm']";
+	
+	
+	///2
+	public static String link_WellsTradeAccnt="//a[@class='buttonPrimary']";
+	public static String link_OptFrOld="//a[@href='../planning/life-events/change-jobs-401k.htm']";
+	public static String link_DebtVsInvst="//a[@href='../planning/goals/getting-started.htm']";
+	
+	public static String label_WhatShouldUExpect="//h1[@id='heading'][contains(text(),'What to Expect')]";
+	public static String label_GettingToKnowU="//h1[@id='heading'][contains(text(),'Day One With Your Financial Advisor')]";
+	public static String label_WhatRUPaying="//h1[@id='heading'][contains(text(),'Fees')]";
+	public static String label_EnvPlan="//h1[contains(text(),'Our Envision® Process')]";
+	public static String label_RetirementPlan="//h1[contains(text(),'The Retirement Income Planning Process')]";
+	public static String btn_SetUpConsult="//a[@class='buttonPrimary']";
+	public static String label_SetUpConsult="//h2[contains(text(),'talk')]";
+	
+	////2
+	
+	public static String label_WellsTradeAccnt="//h1[@id='heading'][contains(text(),'Choose a WellsTrade')]";
+	public static String label_OptFrOld="//h1[contains(text(),'Keeping Control of Your Retirement Accounts')]";
+	public static String label_DebtVsInvst="//h1[contains(text(),'Debt Management Solutions')]";
+	
+	
+	
+	public static void fnValidateMeetanAdvisor(){
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_MeetAnAdvisor, "Meet With An Advisor Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_MeetAnAdvisor, "Meet With An Advisor Page");
+		
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_youNyourFA, "You And Your Advisor Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_yourPlan, "Your Plan Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_ConnectAnAdvisor, "Connect An Advisor Link");
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_youNyourFA, "You And Your Advisor Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_YounYourAdvisor, "You And Your Advisor Page");
+		//////////beg/////////////////////////////////////////////////////////////
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_WhatShouldUExpect, "What Should you Expect");
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_WhatShouldUExpect, "What Should you Expect");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_WhatShouldUExpect, "What To Expect Page");
+		
+		KeywordImplementation.driver.navigate().back();
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_GettingToKnowU, "Getting To Know You");
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_GettingToKnowU, "Getting To Know You");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_GettingToKnowU, "Day One With Your Financial Advisor Page");
+		
+		KeywordImplementation.driver.navigate().back();
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_WhatRUPaying, "What Are You Paying For?");
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_WhatRUPaying, "What Are You Paying For?");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_WhatRUPaying, "Set up a Consultation Page");
+		///////////end/////////////////////////////////////////////////////////////
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_MeetAnAdvisor, "Meet With An Advisor");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_MeetAnAdvisor, "Meet With An Advisor Page");
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_yourPlan, "Your Plan Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_yourPlan, "Your Plan Page");
+		///////////////////////////beg2/////////////////////////////////////////////////////////////
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_EnvPlan, "Our Envision Process");
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_EnvPlan, "Our Envision Process");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_EnvPlan, "Our Envision Process Page");
+		
+		KeywordImplementation.driver.navigate().back();
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_RetirementPlan, "Retirement Income Planning");
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_RetirementPlan, "Retirement Income Planning");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_RetirementPlan, "Retirement Income Planning Page");
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_MeetAnAdvisor, "Meet With An Advisor");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.btn_SetUpConsult, "Set Up Consultation");
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.btn_SetUpConsult, "Set Up Consultation");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_SetUpConsult, "Set Up Consultation Page with Form");
+		
+	}
+	
+	
+	public static void fnValidateInvestOnline(){
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_InvestOnline, "Invest Online Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_InvestOnline, "Invest Online Page");
+		
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_WellsTradeBenefits, "WellsTrade Benefits Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_WellsTradeDemo, "DEMO: See It In Action Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_PricesnFees, "Prices And Fees Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_toolsnGuidance, "Tools And Guidance Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_WellsTradeAccnt, "Apply For a WellsTrade Account");
+		//Validate Benefits
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_WellsTradeBenefits, "WellsTrade Benefits Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_WellsTradeBenefits, "WellsTrade Benefits Page");
+		
+		//Navigate To Invest Online
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_InvestOnline, "Invest Online Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_InvestOnline, "Invest Anytime, from Anywhere Page");
+		
+		//Validate Demo
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_WellsTradeDemo, "DEMO: See It In Action Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_WellsTradeDemo, "See WellsTrade® in Action Page");
+		
+		//Navigate To Invest Online
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_InvestOnline, "Invest Online Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_InvestOnline, "Invest Online Page");
+		
+		//Validate Prices and Fees
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_PricesnFees, "Prices And Fees Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_PricesnFees, " WellsTrade® Prices and Fees Page");
+		
+		//Navigate To Invest Online
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_InvestOnline, "Invest Online Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_InvestOnline, "Invest Online Page");
+		
+		//Validate Tools and Guidance
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_toolsnGuidance, "Tools And Guidance Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_toolsnGuidance, "Tools, Tips, and Features Page");
+		
+		///////////////updated///////////////
+		//Navigate To Invest Online
+		
+		KeywordImplementation.driver.navigate().back();
+		KeywordImplementation.waitForPageLoading();
+		
+		//Validate Wells Trade Account
+
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_WellsTradeAccnt, "Apply For a WellsTrade Account");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_WellsTradeAccnt, "Choose a WellsTrade® Account That Works Best For You");
+	}
+	
+	
+	
+	public static void fnValidateAdviceByPhone(){
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_AdviceByPhone, "Get Advice By Phone Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_AdviceByPhone, "Get Advice By Phone Page");
+		
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_LearnAdvantages, "Learn About The Advantages Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_MeetOurTeam, "Meet Our Team Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_FeesNCommissions, "Fees And Commisssion Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_PlanningNTools, "Planning And Tools Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_OptFrOld, "Options for That Old 401(k) Link");
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.link_DebtVsInvst, "Debt vs. Investing Link");
+		
+		//Validate Advantages
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_LearnAdvantages, "Learn About The Advantages Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_LearnAdvantages, "Wells Fargo Advisors Solutions’ Advantages Page");
+		
+		//Navigate To Get Advice By Phone
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_AdviceByPhone, "Get Advice By Phone Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_AdviceByPhone, "Get Advice By Phone Page");
+		
+		//Validate Meet Our Team
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_MeetOurTeam, "Meet Our Team Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_MeetOurTeam, "Wells Fargo Advisors Solutions Financial Advisors Page");
+		
+		//Navigate To Get Advice By Phone
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_AdviceByPhone, "Get Advice By Phone Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_AdviceByPhone, "Get Advice By Phone Page");
+		
+		//Validate Fees And Commission
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_FeesNCommissions, "Fees And Commisssion Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_FeesNCommissions, "Fees Page");
+		
+		//Navigate To Get Advice By Phone
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_AdviceByPhone, "Get Advice By Phone Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_AdviceByPhone, "Get Advice By Phone Page");
+		
+		//Validate Planning And Tools
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_PlanningNTools, "Planning And Tools Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_PlanningNTools, "Wells Fargo Advisors Solutions Tools Page");
+		
+		///////////////updated///////////////
+		
+		//Navigate To Get Advice By Phone
+		
+		KeywordImplementation.driver.navigate().back();
+		KeywordImplementation.waitForPageLoading();
+		
+		//Validate Options for That Old 401(k)
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_OptFrOld, "Options for That Old 401(k) Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_OptFrOld, "Keeping Control of Your Retirement Accounts Page");
+		
+		//Navigate To Get Advice By Phone
+		
+		KeywordImplementation.driver.navigate().back();
+		KeywordImplementation.waitForPageLoading();
+		
+		//Validate Options for That Old 401(k)
+		
+		KeywordImplementation.JSCLickOn("xpath", Brokerage_1BW_OR.link_DebtVsInvst, "Debt vs. Investing Link");
+		KeywordImplementation.waitForPageLoading();
+		KeywordImplementation.VerifyElement("xpath", Brokerage_1BW_OR.label_DebtVsInvst, "Debt Management Solutions");
+		
+		//Navigate To Get Advice By Phone
+		
+		KeywordImplementation.driver.navigate().back();
+		KeywordImplementation.waitForPageLoading();
+	}
